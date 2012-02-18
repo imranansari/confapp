@@ -12,3 +12,8 @@ gem "mongoid-rspec", ">= 1.4.4", :group => :test
 gem "bson_ext", ">= 1.3.1"
 gem "mongoid", ">= 2.4.3"
 gem "devise", ">= 2.0.0"
+
+gem 'requirejs-rails'
+
+gem "thin"
+gem "heroku"
