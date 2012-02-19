@@ -12,8 +12,10 @@ define([
     Backbone.ModelBinding = require('modelbinding');
 
     var NewQuestionView = Backbone.View.extend({
+        el: $("#newQuestion"),
 
         initialize:function (options) {
+            console.log('init called');
             this.template = Handlebars.compile(htmlTpl);
             //this.model = new Message();
         },
@@ -37,7 +39,6 @@ define([
             //Messages.add(new Message({desc: messageDesc, dateTime: new Date()}));
             Questions.create({text: questionDesc, dateTime: new Date()});
         }
-
 
     });
 
