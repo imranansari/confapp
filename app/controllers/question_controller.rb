@@ -18,10 +18,12 @@ class QuestionController < ApplicationController
       format.json {
         question = JSON.parse(request.body.read)
 
-        updateQuestion = Question.where(:_id => question["_id"]).first
+        updateQuestion = Question.where(:_id => question["id"]).first
         updateQuestion.status = question["status"]
 
         updateQuestion.save
+
+        Juggernaut.publish("moderated_questions", question)
 
         render json: question
       }
@@ -50,6 +52,9 @@ class QuestionController < ApplicationController
         newQuestion.save
 
         puts question
+        question["id"] = newQuestion._id
+
+        Juggernaut.publish("questions", question)
 
         render json: question
       }

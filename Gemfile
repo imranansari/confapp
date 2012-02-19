@@ -15,5 +15,7 @@ gem "devise", ">= 2.0.0"
 
 gem 'requirejs-rails'
 
+gem 'juggernaut'
+
 gem "thin"
 gem "heroku"

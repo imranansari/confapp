@@ -10,6 +10,7 @@ paths:
     viewporter: "libs/zynga/viewporter"
     text: "libs/require/text"
     application: "application"
+    juggernaut: "http://http403.local:8080/application"
 
 modules:
   - name: "jquery"
@@ -23,3 +24,4 @@ modules:
   - name: "viewporter"
   - name: "text"
   - name: "application"
+  - name: "juggernaut"

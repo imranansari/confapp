@@ -6,6 +6,7 @@ require(["order!jquery",
     "order!backbone",
     "order!modelbinding",
     "order!bootstrap",
-    'views/app'], function(DisplayQuestionsView){
-  var displayQuestionView = new DisplayQuestionsView();
+    "order!juggernaut",
+    "views/app"], function (DisplayQuestionsView) {
+    var displayQuestionView = new DisplayQuestionsView();
 });

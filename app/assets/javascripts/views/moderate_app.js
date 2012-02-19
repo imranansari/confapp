@@ -16,14 +16,23 @@ define([
     'jquery',
     'underscore',
     'backbone',
+    'juggernaut',
     'models/question',
     'collections/questions',
     'views/questionsView'
-], function ($, _, Backbone, Question, Questions, QuestionsView) {
+], function ($, _, Backbone, juggernaut, Question, Questions, QuestionsView) {
 
     $(document).ready(function () {
 
         var questionsCollection = new Questions();
+
+        var jug = new Juggernaut;
+        jug.subscribe("questions", function (data) {
+            console.log(data);
+            questionsCollection.add(data);
+        });
+
+
         questionsCollection.fetch({
             success:function (questionsCollection) {
                 var questionsView = new QuestionsView({collection:questionsCollection, mode:"admin"});
