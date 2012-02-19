@@ -28,7 +28,7 @@ define([
         Questions.add({desc: "Whats up Juranomo ?"});
         Questions.add({desc: "Whats up Honorable Doc ?"});
 
-        var questionsView = new QuestionsView({collection: Questions});
+        var questionsView = new QuestionsView({collection: Questions, mode: "admin"});
 
         $("#questions").prepend(questionsView.render().el);
         //init QuestionsView with collection
@@ -37,11 +37,11 @@ define([
 
     });
 
-    var DisplayQuestionsView = Backbone.View.extend({
+    var ModerateQuestionsView = Backbone.View.extend({
 
 
     });
 
 
-    return DisplayQuestionsView;
+    return ModerateQuestionsView;
 });

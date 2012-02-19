@@ -4,4 +4,8 @@ class QuestionController < ApplicationController
     render :layout => false
   end
 
+  def moderate
+    render :layout => false
+  end
+
 end

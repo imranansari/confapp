@@ -4,22 +4,25 @@ define([
     'backbone',
     'handlebars',
     'modelbinding',
-    'text!templates/message.html',
-    'models/message'
-], function ($, _, Backbone, handlebars, modelbinding, htmlTpl, Message) {
+    'text!templates/question.html'
+], function ($, _, Backbone, handlebars, modelbinding, htmlTpl) {
 
     Backbone.ModelBinding = require('modelbinding');
 
-    var MessageView = Backbone.View.extend({
+    var QuestionView = Backbone.View.extend({
 
         initialize:function (options) {
+            console.log(this.options.mode);
+
             this.template = Handlebars.compile(htmlTpl);
             _.bindAll(this, 'render', 'remove');
-            this.model.bind('change', this.render);
+            this.model.bind('change', this.updateState);
+            //this.model.bind('change:status', this.render);
             this.model.bind('destroy', this.remove);
         },
         render:function () {
-            var content = this.template(this.model.toJSON());
+            var isAdmin = (this.options.mode == 'admin') ? true : false;
+            var content = this.template({model:this.model.toJSON(), isAdmin:isAdmin});
 
             $(this.el).html(content);
             //Backbone.ModelBinding.bind(this);
@@ -27,21 +30,57 @@ define([
         },
 
         remove:function () {
+
             $(this.el).remove();
         },
 
         events:{
-            "click #updateMessage":"update"
+            "click .decline":"decline",
+            "click .approve":"approve"
+        },
+
+        updateState:function () {
+            console.log('state updated ');
+            if (this.get('status') == 'approved') {
+                $(event.target).siblings().removeClass('btn-danger');
+                $(event.target).siblings().html('Decline');
+
+                $(event.target).addClass('btn-success');
+                $(event.target).html('Approved');
+
+            } else if (this.get('status') == 'declined') {
+
+                $(event.target).siblings().removeClass('btn-success');
+                $(event.target).siblings().html('Approve');
+
+
+                $(event.target).addClass('btn-danger');
+                $(event.target).html('Declined');
+            }
+
         },
 
 
-        update:function () {
-            console.log(this.model.toJSON());
-            this.model.save();
-        }
+        approve:function () {
 
+            this.model.set({status:'approved'});
+            //console.log(this.model.toJSON());
+            //this.model.save();
+
+            return this;
+        },
+
+        decline:function () {
+
+            this.model.set({status:'declined'});
+
+            // console.log(this.model.toJSON());
+            //this.model.save();
+
+            return true;
+        }
 
     });
 
-    return MessageView;
+    return QuestionView;
 });

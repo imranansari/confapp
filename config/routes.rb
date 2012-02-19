@@ -7,6 +7,7 @@ Confapp::Application.routes.draw do
   resources :users, :only => :show
 
   get 'question/index'
+  get 'question/moderate'
 
 
   # The priority is based upon order of creation:

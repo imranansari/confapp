@@ -1,8 +1,16 @@
 <div class="row-fluid message">
-    <div class="span1"><img src="https://twimg0-a.akamaihd.net/profile_images/1181071089/image_normal.jpg" alt=""></div>
-    <div class="span11">
-        {{ text }}
+    <div class="span10">{{ model.desc }}</div>
+    <div class="span2">
+
+        {{# if isAdmin}}
+        <div class="moderate_panel">
+            <button class="btn approve">Approve</button>
+            <button class="btn decline">Decline</button>
+
+        </div>
+
+        {{/if}}
     </div>
-    <div>{{ dateTime }}</div>
+    <div>{{ model.lapsedTime }}</div>
 </div>
 <hr>

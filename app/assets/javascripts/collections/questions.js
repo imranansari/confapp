@@ -1,18 +1,16 @@
 define([
     'underscore',
     'backbone',
-    'models/message'
-], function (_, Backbone, Message) {
+    'models/question'
+], function (_, Backbone, Question) {
 
-    var Messages = Backbone.Collection.extend({
+    var Questions = Backbone.Collection.extend({
+        model:Question,
 
-        // Reference to this collection's model.
-        model:Message,
-
-        url:'/message'
+        url:'/question'
 
     });
 
 
-    return new Messages;
+    return new Questions;
 });

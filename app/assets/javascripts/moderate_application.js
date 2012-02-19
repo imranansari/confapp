@@ -6,6 +6,6 @@ require(["order!jquery",
     "order!backbone",
     "order!modelbinding",
     "order!bootstrap",
-    'views/app'], function(DisplayQuestionsView){
-  var displayQuestionView = new DisplayQuestionsView();
+    'views/moderate_app'], function(ModerateQuestionsView){
+  var moderateQuestionsView = new ModerateQuestionsView();
 });
