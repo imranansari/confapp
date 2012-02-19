@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Moderate Panel Questions</title>
+  <%= requirejs_include_tag "newquestion_application" %>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag "bootstrap" %>
+  <%= stylesheet_link_tag "bootstrap-responsive" %>
+  <%= stylesheet_link_tag "question" %>
+
+  <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/>
+
+</head>
+<body>
+<div id="viewporter">
+  <div id="topmenu"></div>
+  <div id="container" class="container">
+    <div id="main" role="main">
+      <div class="page-header">
+        <h2>Post New Question
+        </h2>
+      </div>
+      <div class="row-fluid">
+
+        <div class="span10">
+
+          <div id="newQuestion" class="well" style="background-color: white"></div>
+
+        </div>
+
+      </div>
+    </div>
+    <!--/row-->
+
+  </div>
+</div>
+</body>
+</html>

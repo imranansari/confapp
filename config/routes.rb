@@ -8,6 +8,7 @@ Confapp::Application.routes.draw do
 
   get 'question/index'
   get 'question/moderate'
+  get 'question/new'
 
 
   # The priority is based upon order of creation:

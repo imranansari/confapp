@@ -4,15 +4,14 @@ define([
     'backbone',
     'handlebars',
     'modelbinding',
-    'text!templates/newmessage.html',
-    'models/message',
-    'collections/messages'
-], function ($, _, Backbone, handlebars, modelbinding, htmlTpl, Message, Messages) {
+    'text!templates/newquestion.html',
+    'models/question',
+    'collections/questions'
+], function ($, _, Backbone, handlebars, modelbinding, htmlTpl, Question, Questions) {
 
     Backbone.ModelBinding = require('modelbinding');
 
-    var NewMessageView = Backbone.View.extend({
-        el: "#newMessage",
+    var NewQuestionView = Backbone.View.extend({
 
         initialize:function (options) {
             this.template = Handlebars.compile(htmlTpl);
@@ -26,21 +25,21 @@ define([
         },
 
         events:{
-            "click #updateMessage":"update"
+            "click #postNewQuestion":"postNewQuestion"
         },
 
 
-        update:function () {
+        postNewQuestion:function () {
             //console.log(this.model.toJSON());
             //this.model.save();
-            messageDesc = $('#messageDesc').val();
-            $('#messageDesc').val('');
+            questionDesc = $('#questionDesc').val();
+            $('#questionDesc').val('');
             //Messages.add(new Message({desc: messageDesc, dateTime: new Date()}));
-            Messages.create({text: messageDesc, dateTime: new Date()});
+            Questions.create({text: questionDesc, dateTime: new Date()});
         }
 
 
     });
 
-    return NewMessageView;
+    return NewQuestionView;
 });
