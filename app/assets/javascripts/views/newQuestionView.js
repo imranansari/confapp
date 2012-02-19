@@ -32,12 +32,11 @@ define([
 
 
         postNewQuestion:function () {
-            //console.log(this.model.toJSON());
-            //this.model.save();
             questionDesc = $('#questionDesc').val();
             $('#questionDesc').val('');
-            //Messages.add(new Message({desc: messageDesc, dateTime: new Date()}));
-            Questions.create({text: questionDesc, dateTime: new Date()});
+
+            var questionsCollection = new Questions();
+            questionsCollection.create({desc: questionDesc});
         }
 
     });

@@ -16,8 +16,8 @@ define([
 
             this.template = Handlebars.compile(htmlTpl);
             _.bindAll(this, 'render', 'remove');
-            this.model.bind('change', this.updateState);
-            //this.model.bind('change:status', this.render);
+            //this.model.bind('change', this.updateState);
+            this.model.bind('change:status', this.updateState);
             this.model.bind('destroy', this.remove);
         },
         render:function () {
@@ -60,23 +60,15 @@ define([
 
         },
 
-
         approve:function () {
-
             this.model.set({status:'approved'});
-            //console.log(this.model.toJSON());
-            //this.model.save();
-
+            this.model.save();
             return this;
         },
 
         decline:function () {
-
             this.model.set({status:'declined'});
-
-            // console.log(this.model.toJSON());
-            //this.model.save();
-
+            this.model.save();
             return true;
         }
 

@@ -23,17 +23,13 @@ define([
 
     $(document).ready(function () {
 
-        //add questions to collection
-        Questions.add({desc: "Whats up doc?"});
-        Questions.add({desc: "Whats up Juranomo ?"});
-        Questions.add({desc: "Whats up Honorable Doc ?"});
-
-        var questionsView = new QuestionsView({collection: Questions, mode: "admin"});
-
-        $("#questions").prepend(questionsView.render().el);
-        //init QuestionsView with collection
-        //render to dom
-
+        var questionsCollection = new Questions();
+        questionsCollection.fetch({
+            success:function (questionsCollection) {
+                var questionsView = new QuestionsView({collection:questionsCollection, mode:"admin"});
+                $("#questions").prepend(questionsView.render().el);
+            }
+        });
 
     });
 
@@ -41,7 +37,6 @@ define([
 
 
     });
-
 
     return ModerateQuestionsView;
 });

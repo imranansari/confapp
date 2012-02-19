@@ -23,17 +23,17 @@ define([
 
     $(document).ready(function () {
 
-        //add questions to collection
-        Questions.add({desc: "Whats up doc?"});
-        Questions.add({desc: "Whats up Juranomo ?"});
-        Questions.add({desc: "Whats up Honorable Doc ?"});
+        var questionsCollection = new Questions();
 
-        var questionsView = new QuestionsView({collection: Questions});
+        questionsCollection.fetch({
+            success:function (questionsCollection) {
 
-        $("#questions").prepend(questionsView.render().el);
-        //init QuestionsView with collection
-        //render to dom
+                var approvedCollection = new Questions(questionsCollection.approved());
 
+                var questionsView = new QuestionsView({collection:approvedCollection, el:$('#questions')});
+                questionsView.render();
+            }
+        });
 
     });
 

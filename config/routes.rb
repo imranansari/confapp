@@ -10,6 +10,10 @@ Confapp::Application.routes.draw do
   get 'question/moderate'
   get 'question/new'
 
+  match 'question', :to => 'question#create', format: :json, :via => :post
+  match 'question', :to => 'question#list', format: :json, :via => :get
+  match 'question/:id', :to => 'question#update', format: :json, :via => :put
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

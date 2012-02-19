@@ -7,10 +7,15 @@ define([
     var Questions = Backbone.Collection.extend({
         model:Question,
 
-        url:'/question'
+        url:'/question',
+
+        approved:function () {
+            return this.filter(function (question) {
+                return question.get('status') === 'approved';
+            });
+        }
 
     });
 
-
-    return new Questions;
+    return Questions;
 });
