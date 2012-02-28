@@ -9,7 +9,6 @@ ul {
   margin: 0px;
 }
 
-
 #wrapper ul {
   clear: both;
   list-style-type: none;
@@ -22,8 +21,8 @@ ul {
   padding-bottom: 4px;
   padding-right: 0px;
   margin-left: 0px;
-//border-bottom: solid 1px #CCCCCC;
- display: block;
+  //border-bottom: solid 1px #CCCCCC;
+  display: block;
 }
 
 .agendaItem {
@@ -100,9 +99,8 @@ ul {
   position: absolute;
   text-align: center;
   background-color: #63081a;
-  background-image: -webkit-gradient(radial, 50% 50%,200,50% 50%,20, from(rgb(98, 8, 25)), to(rgb(99, 8, 26)));
+  background-image: -webkit-gradient(radial, 50% 50%, 200, 50% 50%, 20, from(rgb(98, 8, 25)), to(rgb(99, 8, 26)));
   background-image: -webkit-radial-gradient(50% 50%, rgb(99, 8, 26), rgb(98, 8, 25));
-
 
   color: #FFFFFF;
   top: 0px;
@@ -116,18 +114,18 @@ ul {
   font-size: 16px;
 
   font-weight: bold;
- text-rendering: optimizelegibility;
+  text-rendering: optimizelegibility;
   color: #FFFFFF;
   vertical-align: 30%;
 }
 
-.header .appBar{
+.header .appBar {
   float: left;
   padding-top: 3px;
 
 }
 
-.header .appLogo{
+.header .appLogo {
 
 }
 
@@ -153,12 +151,12 @@ ul {
 #header2 {
   position: relative;
   padding-top: 3px;
- background: #ECEFF2;
+  background: #ECEFF2;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FBFBFB), color-stop(100%, #ECEFF2));
   font-weight: bold;
   top: 33px;
   height: 33px;
- border-bottom: solid 1px #C8CBCE;
+  border-bottom: solid 1px #C8CBCE;
   z-index: 1;
 }
 
@@ -225,14 +223,14 @@ ul {
 
 .agendaItem h5 {
   padding-top: 5px;
- font-style: italic;
+  font-style: italic;
 }
 
 .appMenuButton {
   border: 1px;
   border-color: maroon;
   padding: 8px;
- border-style: solid;
+  border-style: solid;
 }
 
 [class^="icon-"] {
