@@ -109,9 +109,10 @@ h3 {
 .header {
   position: absolute;
   text-align: center;
-  background-color: #64081a;
-  background-image: -webkit-gradient(radial, 50% 100%, 100,50% -50%, 100, from(rgb(161, 0, 43)), to(rgb(100, 8, 26)));
-  background-image: -webkit-radial-gradient(50% 0%, rgb(100, 8, 26), rgb(161, 0, 43));
+  background-color: #63081a;
+  background-image: -webkit-gradient(radial, 50% 50%,200,50% 50%,20, from(rgb(98, 8, 25)), to(rgb(99, 8, 26)));
+  background-image: -webkit-radial-gradient(50% 50%, rgb(99, 8, 26), rgb(98, 8, 25));
+
 
   color: #FFFFFF;
   top: 0px;
@@ -120,7 +121,7 @@ h3 {
   border-bottom: solid 1px #444444;
 }
 
-.header .appTtitle {
+.header .appTitle {
 //font-size: 24px;
   //font-weight: bold;
  /* 	padding-top:18px;
@@ -242,7 +243,7 @@ h3 {
 .appMenuButton {
   border: 1px;
   border-color: maroon;
-  padding: 10px;
+  padding: 8px;
 //width: 80px;
  border-style: solid;
 }
