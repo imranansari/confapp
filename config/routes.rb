@@ -1,6 +1,10 @@
 Confapp::Application.routes.draw do
   
 
+  get "agenda/index"
+
+  get "agenda/list"
+
   root :to => "home#index"
 
   devise_for :users
@@ -13,6 +17,9 @@ Confapp::Application.routes.draw do
   match 'question', :to => 'question#create', format: :json, :via => :post
   match 'question', :to => 'question#list', format: :json, :via => :get
   match 'question/:id', :to => 'question#update', format: :json, :via => :put
+
+
+  match 'agenda/index', :to => 'agenda#index', format: :json, :via => :get
 
 
   # The priority is based upon order of creation:

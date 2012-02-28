@@ -17,7 +17,6 @@ define([
         initialize:function (options) {
             console.log('init called');
             this.template = Handlebars.compile(htmlTpl);
-            //this.model = new Message();
         },
         render:function () {
             var content = this.template();

@@ -14,13 +14,14 @@ getActivitiesFromService = function ($) {
 
 define([
     'jquery',
+    'livequery',
     'underscore',
     'backbone',
     'juggernaut',
     'models/question',
     'collections/questions',
     'views/questionsView'
-], function ($, _, Backbone, juggernaut, Question, Questions, QuestionsView) {
+], function ($, livequery, _, Backbone, juggernaut, Question, Questions, QuestionsView) {
 
     $(document).ready(function () {
 
@@ -43,6 +44,11 @@ define([
                 var questionsView = new QuestionsView({collection:approvedCollection, el:$('#questions')});
                 questionsView.render();
             }
+        });
+
+        $('.question').livequery(function () {
+            console.log('a');
+            $(this).addClass('bounceInDown');
         });
 
     });

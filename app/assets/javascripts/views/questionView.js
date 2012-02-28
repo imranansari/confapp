@@ -5,11 +5,13 @@ define([
     'handlebars',
     'modelbinding',
     'text!templates/question.html'
-], function ($, _, Backbone, handlebars, modelbinding, htmlTpl) {
+], function ($,  _, Backbone, handlebars, modelbinding, htmlTpl) {
 
     Backbone.ModelBinding = require('modelbinding');
 
     var QuestionView = Backbone.View.extend({
+
+        //el: $(".question"),
 
         initialize:function (options) {
             console.log(this.options.mode);
@@ -25,6 +27,7 @@ define([
             var content = this.template({model:this.model.toJSON(), isAdmin:isAdmin});
 
             $(this.el).html(content);
+
             //Backbone.ModelBinding.bind(this);
             return this;
         },
@@ -36,7 +39,13 @@ define([
 
         events:{
             "click .decline":"decline",
-            "click .approve":"approve"
+            "click .approve":"approve",
+            "click .question":"highlight"
+        },
+
+
+        highlight:function(){
+            $('.question').toggleClass('bounceInDown');
         },
 
         updateState:function () {
@@ -57,7 +66,6 @@ define([
                 $(event.target).addClass('btn-danger');
                 $(event.target).html('Declined');
             }
-
         },
 
         approve:function () {

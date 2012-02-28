@@ -1,16 +1,16 @@
-<div class="row-fluid message">
-    <div class="span10">{{ model.desc }}</div>
-    <div class="span2">
+<div class="question">
+    <div class="row-fluid message">
+        <div class="span10">{{ model.desc }}</div>
+        <div class="span2">
+            {{# if isAdmin}}
+                <div class="moderate_panel">
+                    <button class="btn approve">Approve</button>
+                    <button class="btn decline">Decline</button>
 
-        {{# if isAdmin}}
-        <div class="moderate_panel">
-            <button class="btn approve">Approve</button>
-            <button class="btn decline">Decline</button>
-
+                </div>
+            {{/if}}
         </div>
-
-        {{/if}}
+        <div>{{ model.lapsedTime }}</div>
     </div>
-    <div>{{ model.lapsedTime }}</div>
+    <hr>
 </div>
-<hr>

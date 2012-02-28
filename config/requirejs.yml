@@ -9,6 +9,7 @@ paths:
     handlebars: "libs/handlebars/handlebars.1.0.0.beta.3"
     viewporter: "libs/zynga/viewporter"
     text: "libs/require/text"
+    iscroll: "libs/iscroll/iscroll"
     application: "application"
     juggernaut: "http://http403.local:8080/application"
 
@@ -23,5 +24,6 @@ modules:
   - name: "handlebars"
   - name: "viewporter"
   - name: "text"
+  - name: "iscroll"
   - name: "application"
   - name: "juggernaut"

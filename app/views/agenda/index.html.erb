@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Agenda</title>
+  <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/>
+
+  <%= requirejs_include_tag "agenda_app" %>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag "bootstrap" %>
+  <%= stylesheet_link_tag "bootstrap-responsive" %>
+  <%= stylesheet_link_tag "agenda" %>
+
+</head>
+
+<body>
+
+<div id="header" class="header">
+  <div class="appBar"></div>
+
+  <span class="appTtitle">  <span><img src="/assets/linc.jpg"></span> IT Leadership Forum</span>
+  <span class="appMenu" style="float: right;position: relative; padding-top: 8px">
+   <span class="appMenuButton" id="agendaButton">
+     <i class="icon-calendar"></i>
+     <!--<span>Agenda</span>-->
+   </span>
+    <span class="appMenuButton" id="speakersButton">
+         <i class="icon-user"></i>
+      <!--<span>Speakers</span>-->
+       </span>
+  </span>
+</div>
+
+<div id="header2">
+  <div class="toolbar">
+
+    <div class="btn-group">
+      <a class="btn" href="#">Mon 3/12</a>
+      <a class="btn" href="#">Tue 3/13</a>
+      <a class="btn" href="#">Wed 3/14</a>
+    </div>
+  </div>
+</div>
+
+<div id="wrapper">
+  <ul id="agendaList" class="agenda-icon-list" style="-webkit-transition-property: -webkit-transform; -webkit-transform-origin-x: 0px; -webkit-transform-origin-y: 0px; -webkit-transition-duration: 0ms; -webkit-transform: translate3d(0px, -0.25px, 0px) scale(1); ">
+    <!--    <li>
+      <div class="row">
+
+        <div class="span6">
+          test1
+        </div>
+        <div class="span2 offset4" style="background-color: red">
+          <div>
+            1:00 p.m. – 1:30 p.m
+          </div>
+          <div style="">
+            Grandville Ballroom, 1st Floor (Room C&D)
+          </div>
+        </div>
+      </div>
+
+    </li>-->
+
+    <li>
+      <div class="agendaItem">
+        <div class="timeslot">8:00 am</div>
+        <h4>Optional Golf Activity</h4>
+      </div>
+    </li>
+
+    <li>
+      <div class="agendaItem">
+        <div class="timeslot">12:00 am – 1:00 pm</div>
+        <h4>Lunch</h4>
+      </div>
+    </li>
+
+    <li>
+      <div class="agendaItem">
+        <div class="timeslot">1:00 am - 2:00 pm</div>
+        <h4>Welcome and Opening Remarks</h4>
+
+        <h5>Marv Maynard</h5>
+        <!--   <h6>Chief Information Officer</h6>-->
+      </div>
+
+    </li>
+
+    <li>
+
+      <div class="agendaItem">
+        <div class="timeslot">1:20 am - 3:00 pm</div>
+        <h4>A New Kind of World</h4>
+
+        <h5>Thornton May</h5>
+        <!--<h6>Executive Director and Dean of the IT Leadership Academy</h6>-->
+      </div>
+
+    </li>
+    <li>
+
+      <div class="agendaItem">
+        <div class="timeslot">1:AM - 2:PM</div>
+        <h4>Welcome and Opening Remarks</h4>
+
+        <h5>Marv Maynard</h5>
+        <!--       <h6>Chief Information Officer</h6>-->
+      </div>
+
+    </li>
+    <li>
+
+      <div class="agendaItem">
+        <div class="timeslot">1:AM - 2:PM</div>
+        <h4>Welcome and Opening Remarks</h4>
+
+        <h5>Marv Maynard</h5>
+        <!--   <h6>Chief Information Officer</h6>-->
+      </div>
+
+    </li>
+    <li>
+
+      <div class="agendaItem">
+        <div class="timeslot">1:AM - 2:PM</div>
+        <h4>Welcome and Opening Remarks</h4>
+
+        <h5>Marv Maynard</h5>
+        <h6>Chief Information Officer</h6>
+      </div>
+
+    </li>
+  </ul>
+</div>
+
+<div id="busy"/>
+Loading...</div>
+
+
+</body>
+
+</html>

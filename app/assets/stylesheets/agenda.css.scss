@@ -1,0 +1,252 @@
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body,
+html,
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+/*
+body {
+
+  width: 100%;
+  background: #DCDCDC;
+}
+
+h3 {
+  font-size: 24px;
+}*/
+
+#wrapper ul {
+  clear: both;
+  list-style-type: none;
+  background: #FFFFFF;
+}
+
+#wrapper li {
+  clear: both;
+  padding-top: 10px;
+  padding-bottom: 4px;
+  padding-right: 0px;
+  margin-left: 0px;
+//border-bottom: solid 1px #CCCCCC;
+ display: block;
+}
+
+.agendaItem {
+  padding-left: 4px;
+  min-height: 20px;
+
+}
+
+#wrapper li .list-icon {
+  float: left;
+  margin-right: 12px;
+  height: 100px; /* TODO: use 100x100 pics instead of scaling */
+}
+
+.agenda-icon-list li {
+//height: 108px;
+
+}
+
+.agenda-icon-list .line1 {
+  padding-top: 20px;
+}
+
+#wrapper li a {
+  text-decoration: none;
+  display: block;
+  margin: 0px;
+}
+
+#wrapper li .line1 {
+  font-size: 15px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 12px;
+  padding-bottom: 0px;
+  padding-left: 12px;
+  font-weight: bold;
+}
+
+#wrapper li .line2 {
+  margin-top: 4px;
+  margin-bottom: 0px;
+  padding-left: 12px;
+  padding-bottom: 12px;
+  color: #666666;
+}
+
+#wrapper li .bubble {
+  clear: both;
+  position: absolute;
+  right: 12px;
+  background-color: #ECEFF2;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: 0px;
+  margin-top: -50px;
+  text-align: center;
+}
+
+#wrapper li .action-icon {
+  position: absolute;
+  right: 12px;
+  margin-top: -60px;
+}
+
+.header {
+  position: absolute;
+  text-align: center;
+  background-color: #64081a;
+  background-image: -webkit-gradient(radial, 50% 100%, 100,50% -50%, 100, from(rgb(161, 0, 43)), to(rgb(100, 8, 26)));
+  background-image: -webkit-radial-gradient(50% 0%, rgb(100, 8, 26), rgb(161, 0, 43));
+
+  color: #FFFFFF;
+  top: 0px;
+  height: 35px;
+  width: 100%;
+  border-bottom: solid 1px #444444;
+}
+
+.header .appTtitle {
+//font-size: 24px;
+  //font-weight: bold;
+ /* 	padding-top:18px;
+ */
+
+  padding-top: 5px;
+  float: left;
+  font-size: 18px;
+  padding-left: 3px;
+
+  font-weight: bold;
+//color: #333;
+ text-rendering: optimizelegibility;
+  color: #FFFFFF;
+}
+
+.header > .nav {
+  position: absolute;
+  left: 12px;
+  height: 100%;
+  padding-top: 18px;
+  padding-right: 12px;
+  border-right: solid 1px #333333;
+}
+
+.header > .action {
+  position: absolute;
+  right: 10px;
+}
+
+.header a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+#header2 {
+  position: relative;
+  padding-top: 3px;
+//padding-left: 8px;
+ background: #ECEFF2; /* for non-css3 browsers */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FBFBFB), color-stop(100%, #ECEFF2));
+  font-weight: bold;
+  top: 33px;
+  height: 33px;
+//right: 0px;
+ border-bottom: solid 1px #C8CBCE;
+  z-index: 1;
+}
+
+.toolbar {
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+#header2 > h2 {
+  font-size: 20px;
+  padding: 0px;
+  margin: 0px;
+}
+
+#wrapper {
+  position: absolute;
+  top: 60px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+#busy {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -65px;
+  margin-top: -31px;
+  color: #FFFFFF;
+  font-size: 24px;
+  z-index: 6;
+  background-color: #000000;
+  opacity: 0.5;
+  width: 100px;
+  height: 32px;
+  padding: 30px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+
+}
+
+#agendaDetails {
+  padding: 12px;
+/* 	margin-bottom: 12px;
+ */
+}
+
+#agendaDetails img {
+  float: left;
+  margin-right: 12px;
+}
+
+.timeslot {
+  width: 100%;
+  background-color: #ECEFF2;
+  position: relative;
+  float: right;
+  color: #999;
+}
+
+.agendaItem h5 {
+  padding-top: 5px;
+//color: #999;
+ font-style: italic;
+}
+
+.appMenuButton {
+  border: 1px;
+  border-color: maroon;
+  padding: 10px;
+//width: 80px;
+ border-style: solid;
+}
+
+[class^="icon-"] {
+  background-image: url(/assets/glyphicons-halflings-white.png);
+}
