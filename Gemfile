@@ -17,5 +17,5 @@ gem 'requirejs-rails'
 
 gem 'juggernaut'
 
-gem "thin"
-gem "heroku"
+#gem "thin"
+#gem "heroku"
