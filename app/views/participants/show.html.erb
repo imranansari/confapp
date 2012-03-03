@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @participant.name %>
+</p>
+
+<p>
+  <b>Bio:</b>
+  <%= @participant.bio %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @participant.title %>
+</p>
+
+<p>
+  <b>Pic file name:</b>
+  <%= @participant.pic_file_name %>
+</p>
+
+<p>
+  <b>Group name:</b>
+  <%= @participant.group_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_participant_path(@participant) %> |
+<%= link_to 'Back', participants_path %>

@@ -1,8 +1,9 @@
 Confapp::Application.routes.draw do
   
 
-  get "agenda/index"
+  resources :participants
 
+  get "agenda/index"
   get "agenda/list"
 
   root :to => "home#index"
@@ -20,6 +21,10 @@ Confapp::Application.routes.draw do
 
 
   match 'agenda/index', :to => 'agenda#index', format: :json, :via => :get
+  match 'agenda', :to => 'agenda#list', format: :json, :via => :get
+
+  match 'agenda/loaddata', :to => 'agenda#loadData', format: :json, :via => :get
+  match 'agenda/create', :to => 'agenda#create', format: :json, :via => :get
 
 
   # The priority is based upon order of creation:

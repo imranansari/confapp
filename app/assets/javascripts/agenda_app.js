@@ -6,18 +6,9 @@ require(["order!jquery",
     "order!backbone",
     "order!modelbinding",
     "order!bootstrap",
-    "order!iscroll"
-    ], function () {
-    //alert(window.innerHeight);
-    //alert($('#wrapper').height());
-    var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScroll: false });
-    scroll.refresh();
+    "order!iscroll",
+    "views/agendaAppView"
+], function (AgendaAppView) {
+    var agendaAppView = new AgendaAppView();
 
-    $("#speakersButton").click(function(){
-        alert('speakers');
-    });
-
-    $("#agendaButton").click(function(){
-        alert('agenda');
-    })
 });

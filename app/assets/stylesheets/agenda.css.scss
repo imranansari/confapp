@@ -17,7 +17,7 @@ ul {
 
 #wrapper li {
   clear: both;
-  padding-top: 10px;
+  //padding-top: 10px;
   padding-bottom: 4px;
   padding-right: 0px;
   margin-left: 0px;
@@ -175,7 +175,7 @@ ul {
 
 #wrapper {
   position: absolute;
-  top: 60px;
+  top: 70px;
   bottom: 0px;
   width: 100%;
   height: 100%;
@@ -235,4 +235,8 @@ ul {
 
 [class^="icon-"] {
   background-image: url(/assets/glyphicons-halflings-white.png);
+}
+
+#pageContainer{
+
 }
