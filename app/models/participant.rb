@@ -15,4 +15,7 @@ class Participant
 
   #has_many :sessions, as: :panelists
 
+
+  belongs_to :panelists, polymorphic: true
+
 end

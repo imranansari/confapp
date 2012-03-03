@@ -25,6 +25,7 @@ Confapp::Application.routes.draw do
 
   match 'agenda/loaddata', :to => 'agenda#loadData', format: :json, :via => :get
   match 'agenda/create', :to => 'agenda#create', format: :json, :via => :get
+  match 'agenda/createpanelist', :to => 'agenda#createPanelist', format: :json, :via => :get
 
 
   # The priority is based upon order of creation:

@@ -15,7 +15,8 @@ class Session
 
   field :participant
 
-  field :panelists
+  field :participants
+  #, :as => :panelists
 
   field :type
 
@@ -26,6 +27,8 @@ class Session
   belongs_to :participant
   #belongs_to :speakers, polymorphic: true
   #belongs_to :panelists, polymorphic: true
+
+  has_many :participants, as: :panelists
 
 
 end

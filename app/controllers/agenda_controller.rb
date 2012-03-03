@@ -174,4 +174,76 @@ class AgendaController < ApplicationController
     end
   end
 
+  def createPanelist
+      puts "create new"
+
+      respond_to do |format|
+        format.json {
+
+          #newSession = Session.new
+          #newSession.name = "some session name"
+          #
+          #newParticipant = Participant.new
+          #newParticipant.name = "Imran"
+          #
+          #newSession.participant = newParticipant
+          #
+          #newSession.participant.save
+          #newSession.save
+
+
+          #newSession = Session.new
+          #newSession.name = "some session name"
+          #
+          #newParticipant = Participant.new
+          #newParticipant.name = "Imran"
+          #
+          #newParticipant.session = newSession
+          #
+          #newParticipant.session.save
+          #newParticipant.save
+
+
+          #Speaker
+
+          newSession = Session.new
+          newSession.name = "My Sesison 1"
+
+          newParticipant1 = Participant.new
+          newParticipant1.name = "Imran"
+
+          newParticipant2 = Participant.new
+          newParticipant2.name = "Numayra"
+
+          #newSession.participants.new(newParticipant1)
+          newSession.save
+          newSession.participants.create(name: "Imran")
+          newSession.participants.create(name: "Numi")
+
+
+          #newSession.participants.save
+
+
+          #newSession = Session.new
+          #newSession.name = "My Sesison 1"
+          #
+          #newParticipant1 = Participant.new
+          #newParticipant1.name = "Imran"
+          #
+          #newParticipant2 = Participant.new
+          #newParticipant2.name = "Numayra"
+          #
+          ##newSession.panelist = newParticipant
+          #newSession.panelists.push(newParticipant1)
+          #newSession.panelists.push(newParticipant2)
+          #
+          #newSession.panelist.save
+          #newSession.save
+
+
+          render json: {:success => true}
+        }
+      end
+    end
+
 end
