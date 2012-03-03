@@ -19,13 +19,15 @@ define([
     'models/session',
     'collections/sessions',
     'views/sessionsView',
-    'views/sessionDetailView'
-], function ($, _, Backbone, Session, Sessions, SessionsView, SessionDetailView) {
+    'views/sessionDetailView',
+    'views/speakerDetailView'
+], function ($, _, Backbone, Session, Sessions, SessionsView, SessionDetailView, SpeakerDetailView) {
 
     var AppRouter = Backbone.Router.extend({
         routes:{
             "agenda/details/:id":"getSessionDetails",
-            "agenda/index":"getAgendaList"
+            "agenda/index":"getAgendaList",
+            "speaker/profile/:id":"getSpeakerInfo"
         },
         getSessionDetails:function (id) {
             //$("#pageContainer").html("Details");
@@ -35,7 +37,7 @@ define([
             var myModel = window.sessionsCollection.get(id);
             console.log(myModel);
 
-            $(".toolbar").html(myModel.get("name") + " - " + myModel.get("slot"));
+            $(".toolbar").html(myModel.get("name"));
 
             window.sessionDetailView = new SessionDetailView({model:myModel});
 
@@ -66,6 +68,27 @@ define([
                 }
             });
 
+        },
+
+        getSpeakerInfo:function(id){
+            console.log(id);
+
+            if(window.sessionDetailView != undefined){
+                window.sessionDetailView.remove();
+            }
+
+            var myModel = window.sessionsCollection.get(id);
+            console.log(myModel);
+
+            $(".toolbar").html(myModel.get("participant").name);
+
+            window.speakerDetailView = new SpeakerDetailView({model:myModel});
+
+            $('#agendaList').html('');
+            $('#agendaList').append(speakerDetailView.render().el);
+
+
+            //window.scroll.refresh();
         }
     });
     // Instantiate the router
@@ -86,6 +109,7 @@ define([
 
         $("#agendaButton").click(function () {
             alert('agenda');
+            window.scroll.refresh();
         })
 
         //sessionsCollection = new Sessions();

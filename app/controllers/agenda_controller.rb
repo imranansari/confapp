@@ -93,6 +93,10 @@ class AgendaController < ApplicationController
             newSession.save
           end
 
+          if !session["location"].nil?
+            newSession.location = session["location"]
+          end
+
           newSession.type = session["type"]
           newSession.save
         }

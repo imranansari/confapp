@@ -4,11 +4,11 @@ define([
     'backbone',
     'handlebars',
     'modelbinding',
-    'text!templates/sessionDetail.html'
+    'text!templates/speakerDetail.html'
 ], function ($,  _, Backbone, handlebars, modelbinding, htmlTpl) {
 
 
-    var SessionView = Backbone.View.extend({
+    var SpeakerDetailView = Backbone.View.extend({
 
         tagName : "li",
 
@@ -47,5 +47,5 @@ define([
 
     });
 
-    return SessionView;
+    return SpeakerDetailView;
 });

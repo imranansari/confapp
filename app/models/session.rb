@@ -19,6 +19,8 @@ class Session
 
   field :type
 
+  field :location
+
   #referenced_in :participant
 
   belongs_to :participant
