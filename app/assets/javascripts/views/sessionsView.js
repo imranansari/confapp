@@ -25,7 +25,25 @@ define([
             this.addAll();
 
             $(this.el).show(0, function(){
-                window.scroll = new iScroll('wrapper', { vScrollbar:false, hScrollbar:false, hScroll:false });
+                //window.scroll = new iScroll('wrapper', { vScrollbar:false, hScrollbar:false, hScroll:false });
+                window.scroll = new iScroll('wrapper', {
+                    vScrollbar:false,
+                    hScrollbar:false,
+                    hScroll:false,
+                            useTransform: false,
+                            onBeforeScrollStart: function (e) {
+                                var target = e.target;
+                                while (target.nodeType != 1) target = target.parentNode;
+
+                                if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA')
+                                    e.preventDefault();
+                            }
+                        });
+
+
+                    document.addEventListener('touchmove', function (e) {
+                        e.preventDefault();
+                    }, false);
 
                 window.scroll.refresh();
              });

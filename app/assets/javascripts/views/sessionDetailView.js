@@ -4,17 +4,24 @@ define([
     'backbone',
     'handlebars',
     'modelbinding',
-    'text!templates/sessionDetail.html'
-], function ($,  _, Backbone, handlebars, modelbinding, htmlTpl) {
+    'text!templates/sessionDetail.html',
+    'text!templates/sessionPanelDetail.html'
+], function ($, _, Backbone, handlebars, modelbinding, sessionDetailTpl, sessionPanelDetailTpl) {
 
 
     var SessionView = Backbone.View.extend({
 
-        tagName : "li",
+        tagName:"li",
 
         initialize:function (options) {
 
-            this.template = Handlebars.compile(htmlTpl);
+            console.log(this.model.get("type"));
+            if (this.model.get("type") == "Panel") {
+                this.template = Handlebars.compile(sessionPanelDetailTpl);
+            } else {
+                this.template = Handlebars.compile(sessionDetailTpl);
+            }
+
             _.bindAll(this, 'render', 'remove');
             this.model.bind('destroy', this.remove);
         },
@@ -23,9 +30,9 @@ define([
 
             $(this.el).html(content);
 
-            $(this.el).show(0, function(){
+            $(this.el).show(0, function () {
                 window.scroll.refresh();
-             });
+            });
 
             return this;
         },

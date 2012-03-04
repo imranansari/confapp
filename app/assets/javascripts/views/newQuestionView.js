@@ -12,7 +12,6 @@ define([
     Backbone.ModelBinding = require('modelbinding');
 
     var NewQuestionView = Backbone.View.extend({
-        el: $("#newQuestion"),
 
         initialize:function (options) {
             console.log('init called');

@@ -1,0 +1,24 @@
+<div class="sessionDetail">
+    <div>{{desc}}</div>
+    <hr>
+    <div>{{location}}</div>
+    <hr>
+    <div class="sessionSpeaker">
+        <span>Moderator</span>
+         <img src="/assets/speakers/rscott.jpg" alt="">
+        <div class="speakerName">{{moderator.name}}</div>
+        <div class="speakerTitle">{{moderator.title}}</div>
+    </div>
+
+    <div class="panelists">
+        <span>Panelists</span>
+    {{#each panelists}}
+        <div class="panelist">
+             <img src="/assets/speakers/rscott.jpg" alt="">
+            <div class="speakerName">{{name}}</div>
+            <div class="speakerTitle">{{title}}</div>
+        </div>
+    {{/each}}
+    </div>
+
+</div>

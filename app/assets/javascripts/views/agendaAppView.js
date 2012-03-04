@@ -20,12 +20,14 @@ define([
     'collections/sessions',
     'views/sessionsView',
     'views/sessionDetailView',
-    'views/speakerDetailView'
-], function ($, _, Backbone, Session, Sessions, SessionsView, SessionDetailView, SpeakerDetailView) {
+    'views/speakerDetailView',
+    'views/newQuestionView'
+], function ($, _, Backbone, Session, Sessions, SessionsView, SessionDetailView, SpeakerDetailView, NewQuestionView) {
 
     var AppRouter = Backbone.Router.extend({
         routes:{
             "agenda/details/:id":"getSessionDetails",
+            "agenda/newquestion":"displayNewQuestion",
             "agenda/index":"getAgendaList",
             "speaker/profile/:id":"getSpeakerInfo"
         },
@@ -33,16 +35,15 @@ define([
             //$("#pageContainer").html("Details");
             //window.sessionsView.remove();
 
-            window.scroll = new iScroll('wrapper', { vScrollbar:false, hScrollbar:false, hScroll:false });
+            //window.scroll = new iScroll('wrapper', { vScrollbar:false, hScrollbar:false, hScroll:false });
             var myModel = window.sessionsCollection.get(id);
             console.log(myModel);
 
             $(".toolbar").html(myModel.get("name"));
-
-            window.sessionDetailView = new SessionDetailView({model:myModel});
-
             $('#agendaList').html('');
-            $('#agendaList').append(sessionDetailView.render().el);
+
+                window.sessionDetailView = new SessionDetailView({model:myModel});
+                $('#agendaList').append(sessionDetailView.render().el);
 
 
             window.scroll.refresh();
@@ -51,10 +52,15 @@ define([
         getAgendaList:function (id) {
             console.log("show agenda list");
 
-            if(window.sessionDetailView != undefined){
+            if (window.sessionDetailView != undefined) {
                 window.sessionDetailView.remove();
             }
 
+            if (window.newQuestionView != undefined) {
+                window.newQuestionView.remove();
+            }
+
+            if(window.sessionsCollection == undefined){
             window.sessionsCollection = new Sessions();
             sessionsCollection.fetch({
                 success:function (sessionsCollection) {
@@ -67,20 +73,25 @@ define([
                     sessionsView.render();
                 }
             });
+            } else {
+                window.sessionsView = new SessionsView({collection:sessionsCollection});
+                sessionsView.render();
+
+            }
 
         },
 
-        getSpeakerInfo:function(id){
+        getSpeakerInfo:function (id) {
             console.log(id);
 
-            if(window.sessionDetailView != undefined){
+            if (window.sessionDetailView != undefined) {
                 window.sessionDetailView.remove();
             }
 
             var myModel = window.sessionsCollection.get(id);
             console.log(myModel);
 
-            $(".toolbar").html(myModel.get("participant").name);
+            $(".toolbar").html(myModel.get("speaker").name);
 
             window.speakerDetailView = new SpeakerDetailView({model:myModel});
 
@@ -89,6 +100,13 @@ define([
 
 
             //window.scroll.refresh();
+        },
+
+        displayNewQuestion:function(){
+            $(".toolbar").html("Post New Question");
+            $('#agendaList').html('');
+            window.newQuestionView = new NewQuestionView();
+            $('#agendaList').append(newQuestionView.render().el);
         }
     });
     // Instantiate the router
@@ -108,9 +126,12 @@ define([
         });
 
         $("#agendaButton").click(function () {
-            alert('agenda');
-            window.scroll.refresh();
-        })
+            window.appRouter.navigate("agenda/index", true);
+        });
+
+        $("#postQuestionButton").click(function(){
+            window.appRouter.navigate("agenda/newquestion", true);
+        });
 
         //sessionsCollection = new Sessions();
 
@@ -136,6 +157,29 @@ define([
 
 
     });
+
+    function loaded() {
+        window.scroll = new iScroll('wrapper', {
+                    vScrollbar:false,
+                    hScrollbar:false,
+                    hScroll:false,
+                    useTransform: false,
+                    onBeforeScrollStart: function (e) {
+                        var target = e.target;
+                        while (target.nodeType != 1) target = target.parentNode;
+
+                        if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA')
+                            e.preventDefault();
+                    }
+                });
+            }
+
+
+            document.addEventListener('touchmove', function (e) {
+                e.preventDefault();
+            }, false);
+
+            document.addEventListener('DOMContentLoaded', loaded, false);
 
     var AgendaAppView = Backbone.View.extend({
 

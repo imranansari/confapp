@@ -8,14 +8,4 @@ class Participant
   field :pic_file_name, :type => String
   field :group_name, :type => String
 
- # references_one :session
-  has_many :sessions
-
-  #has_many :sessions, as: :speakers
-
-  #has_many :sessions, as: :panelists
-
-
-  belongs_to :panelists, polymorphic: true
-
 end

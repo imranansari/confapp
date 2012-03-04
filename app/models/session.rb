@@ -13,22 +13,18 @@ class Session
 
   field :slot
 
-  field :participant
+  field :speaker_id, :type => BSON::ObjectId
+  field :speaker
 
-  field :participants
-  #, :as => :panelists
+  field :moderator_id, :type => BSON::ObjectId
+  field :moderator
+
+  field :panelist_ids, :type => Array
+  field :panelists
 
   field :type
 
   field :location
-
-  #referenced_in :participant
-
-  belongs_to :participant
-  #belongs_to :speakers, polymorphic: true
-  #belongs_to :panelists, polymorphic: true
-
-  has_many :participants, as: :panelists
 
 
 end

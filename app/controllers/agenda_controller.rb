@@ -43,14 +43,34 @@ class AgendaController < ApplicationController
 
 
         sessions.each { |session|
-          puts session["name"]
-          session[:speakerProfile] = speakerProfile
+          #puts session["name"]
+
+          if !session["speaker_id"].nil?
+            participant = Participant.where(:_id => session["speaker_id"]).first
+            session[:speaker] = participant
+          end
+
+          if !session["moderator_id"].nil?
+            participant = Participant.where(:_id => session["moderator_id"]).first
+            session[:moderator] = participant
+          end
+
+          if !session["panelist_ids"].nil?
+            session[:panelists] = Array.new
+
+            session["panelist_ids"].each{|panelist|
+              puts "panelist id =" + panelist
+              participant = Participant.where(:_id => panelist).first
+              session[:panelists].push(participant)
+            }
+          end
+
           sessions_with_speakers.push session
           #session[:speakerProfile] = speakerProfile
         }
 
 
-        render json: sessions
+        render json: sessions_with_speakers
       }
     end
   end
@@ -85,19 +105,23 @@ class AgendaController < ApplicationController
             newSession.slot = newSession.start.strftime("%I:%M%P")
           end
 
-          if !session["participant_id"].nil?
-            session["participant_id"]
-            participant = Participant.where(:_id => session["participant_id"]).first
-            newSession.participant = participant
-
-            newSession.save
-          end
+          #if !session["speaker"].nil?
+          #  session["participant_id"]
+          #  participant = Participant.where(:_id => session["speaker"]).first
+          #  newSession.participant = participant
+          #
+          #  newSession.save
+          #end
 
           if !session["location"].nil?
             newSession.location = session["location"]
           end
 
           newSession.type = session["type"]
+          newSession.speaker_id = session["speaker_id"]
+          newSession.moderator_id = session["moderator_id"]
+          newSession.panelist_ids = session["panelist_ids"]
+
           newSession.save
         }
 
