@@ -9,9 +9,9 @@ define([
 
         url:'/question',
 
-        approved:function () {
+        approved:function (panel) {
             return this.filter(function (question) {
-                return question.get('status') === 'approved';
+                return  ((question.get('status') === 'approved') && (question.get('panel') === panel));
             });
         }
 

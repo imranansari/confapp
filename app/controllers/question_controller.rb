@@ -48,6 +48,7 @@ class QuestionController < ApplicationController
 
         newQuestion = Question.new
         newQuestion.desc = question["desc"]
+        newQuestion.panel = question["panel"]
 
         newQuestion.save
 

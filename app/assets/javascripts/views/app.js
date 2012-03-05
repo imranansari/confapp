@@ -26,23 +26,34 @@ define([
     $(document).ready(function () {
 
         var questionsCollection = new Questions();
-        var approvedCollection;
+        var itVpPanelCollection;
+        var bizLeaderPanelCollection;
 
         var jug = new Juggernaut;
         jug.subscribe("moderated_questions", function (data) {
             console.log("Got data: " + data);
             if (data.status === 'approved') {
-                approvedCollection.add(data);
+                if(data.panel == 'IT VP Panel'){
+                    itVpPanelCollection.add(data);
+                } else if(data.panel == 'Business Leader Panel'){
+                    bizLeaderPanelCollection.add(data)
+                }
             }
         });
 
         questionsCollection.fetch({
             success:function (questionsCollection) {
 
-                approvedCollection = new Questions(questionsCollection.approved());
+                //approvedCollection = new Questions(questionsCollection.approved('Business Leader Panel'));
 
-                var questionsView = new QuestionsView({collection:approvedCollection, el:$('#questions')});
-                questionsView.render();
+                bizLeaderPanelCollection = new Questions(questionsCollection.approved('Business Leader Panel'));
+                itVpPanelCollection = new Questions(questionsCollection.approved('IT VP Panel'));
+
+                var bizLeaderPanelView = new QuestionsView({collection:bizLeaderPanelCollection, el:$('#bizLeaderPanelCollection')});
+                var itVpPanelView = new QuestionsView({collection:itVpPanelCollection, el:$('#itVpPanelCollection')});
+
+                bizLeaderPanelView.render();
+                itVpPanelView.render();
             }
         });
 

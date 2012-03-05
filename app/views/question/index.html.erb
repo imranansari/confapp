@@ -19,20 +19,47 @@
   <div id="topmenu"></div>
   <div id="container" class="container">
     <div id="main" role="main">
-      <div class="page-header">
-        <h2>Questions
-          <small>Panel Name</small>
-        </h2>
+
+      <div id="header" class="header">
+
+        <span class="appBar">
+          <span class="appLogo"><img src="/assets/linc.jpg"></span>
+          <span class="appTitle">IT Leadership Forum 2012</span>
+        </span>
+
+        <span class="appMenu" style="float: right;position: relative; padding-top: 8px">
+         <span class="appMenuButton" id="agendaButton">
+           <i class="icon-calendar"></i>
+           <!--<span>Agenda</span>-->
+         </span>
+          <span class="appMenuButton" id="speakersButton">
+               <i class="icon-user"></i>
+            <!--<span>Speakers</span>-->
+          </span>
+          <span class="appMenuButton" id="postQuestionButton">
+               <i class="icon-comment"></i>
+            <!--<span>Speakers</span>-->
+          </span>
+        </span>
       </div>
-      <div class="row-fluid">
 
-        <div class="span12">
+      <div class="well"><h3>Questions to the Panel</h3></div>
 
-          <div id="questions" class="well" style="background-color: white"></div>
-
+      <div class="tabbable">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#1" data-toggle="tab">Business Leader Panel</a></li>
+          <li><a href="#2" data-toggle="tab">IT VP Panel</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="1">
+                <div id="bizLeaderPanelCollection" class="well" style="background-color: white"></div>
+          </div>
+          <div class="tab-pane" id="2">
+            <div id="itVpPanelCollection" class="well" style="background-color: white"></div>
+          </div>
         </div>
-
       </div>
+
     </div>
     <!--/row-->
 

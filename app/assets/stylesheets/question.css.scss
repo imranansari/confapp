@@ -32,3 +32,16 @@
 	animation-timing-function: ease;
 	animation-fill-mode: both;
 }
+
+
+.header {
+  background-color: #63081A;
+  background-image: -webkit-gradient(radial, 50% 50%, 200, 50% 50%, 20, from(#620819), to(#63081A));
+  background-image: -webkit-radial-gradient(50% 50%, #63081A, #620819);
+  color: white;
+  height: 40px;
+  width: 100%;
+  font-size: 200%;
+  border-bottom: solid 1px #444;
+  padding-top: 10px;
+}

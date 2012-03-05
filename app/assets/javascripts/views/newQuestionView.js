@@ -31,10 +31,11 @@ define([
 
         postNewQuestion:function () {
             questionDesc = $('#questionDesc').val();
+            questionPanelType = $('#questionPanelType').val();
             $('#questionDesc').val('');
 
             var questionsCollection = new Questions();
-            questionsCollection.create({desc: questionDesc});
+            questionsCollection.create({desc: questionDesc, panel: questionPanelType});
         }
 
     });
