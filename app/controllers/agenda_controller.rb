@@ -79,7 +79,9 @@ class AgendaController < ApplicationController
     respond_to do |format|
       format.json {
 
-        jsonData = File.read(File.join('public/data', 'agenda1.json'))
+        #jsonData = File.read(File.join('public/data', 'agenda1.json'))
+        #jsonData = File.read(File.join('public/data', 'agenda-tue.json'))
+        jsonData = File.read(File.join('public/data', 'agenda-wed.json'))
 
         #puts jsonData
 
@@ -100,9 +102,9 @@ class AgendaController < ApplicationController
 
           if !session["end"].nil?
             newSession.end = DateTime.parse(session["end"])
-            newSession.slot = newSession.start.strftime("%I:%M%P") +" - " + newSession.end.strftime("%I:%M%P")
+            newSession.slot = newSession.start.strftime("%-I:%M%P") +" - " + newSession.end.strftime("%-I:%M%P")
           else
-            newSession.slot = newSession.start.strftime("%I:%M%P")
+            newSession.slot = newSession.start.strftime("%-I:%M%P")
           end
 
           #if !session["speaker"].nil?

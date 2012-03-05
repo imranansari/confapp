@@ -28,6 +28,7 @@ define([
         routes:{
             "agenda/details/:id":"getSessionDetails",
             "agenda/newquestion":"displayNewQuestion",
+            "agenda/day/:day":"displayAgendaForDay",
             "agenda/index":"getAgendaList",
             "speaker/profile/:id":"getSpeakerInfo"
         },
@@ -61,18 +62,22 @@ define([
             }
 
             if(window.sessionsCollection == undefined){
-            window.sessionsCollection = new Sessions();
-            sessionsCollection.fetch({
-                success:function (sessionsCollection) {
+                window.sessionsCollection = new Sessions();
+                sessionsCollection.fetch({
+                    success:function (sessionsCollection) {
 
-                    //approvedCollection = new Sessions(sessionsCollection.approved());
+                        //approvedCollection = new Sessions(sessionsCollection.approved());
 
-                    //$("#wrapper").html('<ul id="agendaList" class="agenda-icon-list"> ');
+                        //$("#wrapper").html('<ul id="agendaList" class="agenda-icon-list"> ');
 
-                    window.sessionsView = new SessionsView({collection:sessionsCollection});
-                    sessionsView.render();
-                }
-            });
+/*                        window.sessionsView = new SessionsView({collection:sessionsCollection});
+                        sessionsView.render();*/
+
+                        window.appRouter.navigate("agenda/day/03-12", true);
+
+                        //alert('getAgendaList');
+                    }
+                });
             } else {
                 window.sessionsView = new SessionsView({collection:sessionsCollection});
                 sessionsView.render();
@@ -91,7 +96,7 @@ define([
             var myModel = window.sessionsCollection.get(id);
             console.log(myModel);
 
-            $(".toolbar").html(myModel.get("speaker").name);
+            //$(".toolbar").html(myModel.get("speaker").name);
 
             window.speakerDetailView = new SpeakerDetailView({model:myModel});
 
@@ -107,6 +112,18 @@ define([
             $('#agendaList').html('');
             window.newQuestionView = new NewQuestionView();
             $('#agendaList').append(newQuestionView.render().el);
+        },
+
+        displayAgendaForDay:function(day){
+            //alert('displayAgendaForDay '+ day);
+            $('#agendaList').html('');
+            var mondayCollection = new Sessions(sessionsCollection.getSessionsByDate(day));
+
+            //alert(mondayCollection.length);
+            //alert("sessioncoll size: " +sessionsCollection.length);
+
+            window.sessionsView = new SessionsView({collection:mondayCollection});
+            sessionsView.render();
         }
     });
     // Instantiate the router
@@ -126,11 +143,16 @@ define([
         });
 
         $("#agendaButton").click(function () {
-            window.appRouter.navigate("agenda/index", true);
+            //window.appRouter.navigate("agenda/index", true);
+            window.appRouter.navigate("agenda/day/03-12", true);
         });
 
         $("#postQuestionButton").click(function(){
             window.appRouter.navigate("agenda/newquestion", true);
+        });
+
+        $(".dateFilter").click(function(){
+            window.appRouter.navigate("agenda/day/"+$(this).data("date"), true)
         });
 
         //sessionsCollection = new Sessions();

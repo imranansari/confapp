@@ -4,11 +4,12 @@
   <title>Agenda</title>
   <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/>
 
+  <script src="http://http403.local:8081/target/target-script-min.js#anonymous"></script>
+
   <%= requirejs_include_tag "agenda_app" %>
   <%= csrf_meta_tags %>
 
   <%= stylesheet_link_tag "bootstrap" %>
-  <%= stylesheet_link_tag "bootstrap-responsive" %>
   <%= stylesheet_link_tag "agenda" %>
 
 </head>
@@ -42,9 +43,9 @@
   <div class="toolbar">
 
     <div class="btn-group">
-      <a class="btn" href="#">Mon 3/12</a>
-      <a class="btn" href="#">Tue 3/13</a>
-      <a class="btn" href="#">Wed 3/14</a>
+      <a class="btn dateFilter" data-date="03-12">Mon 3/12</a>
+      <a class="btn dateFilter" data-date="03-13">Tue 3/13</a>
+      <a class="btn dateFilter" data-date="03-14">Wed 3/14</a>
     </div>
   </div>
 </div>

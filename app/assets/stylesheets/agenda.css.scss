@@ -24,6 +24,8 @@ ul {
   margin-left: 0px;
   //border-bottom: solid 1px #CCCCCC;
   display: block;
+  min-height: 50px;
+
 }
 
 .agendaItem {
@@ -240,4 +242,41 @@ ul {
 
 #pageContainer{
 
+}
+
+.row_detail{
+  position: relative;
+  float: right;
+  top: -15px;
+  right: 10px;
+  opacity:0.4;
+}
+
+/*
+.speakerPic {
+display: inline;
+}
+
+.speakerName {
+  display: inline;
+}
+
+.speakerTitle{
+  display: inline;
+}*/
+
+.panelists .row_detail {
+  position: relative;
+  float: right;
+  top: 15px;
+  right: 10px;
+  opacity:0.4;
+}
+
+.sessionSpeaker .row_detail {
+  position: relative;
+  float: right;
+  top: 15px;
+  right: 10px;
+  opacity:0.4;
 }

@@ -1,24 +1,56 @@
 <div class="sessionDetail">
     <div>{{desc}}</div>
     <hr>
-    <div>{{location}}</div>
+    <div><i class="icon-map-marker"
+            style="background-image: url(/assets/glyphicons-halflings.png) !important;"></i>
+        {{location}}
+    </div>
     <hr>
     <div class="sessionSpeaker">
-        <span>Moderator</span>
-         <img src="/assets/speakers/rscott.jpg" alt="">
-        <div class="speakerName">{{moderator.name}}</div>
-        <div class="speakerTitle">{{moderator.title}}</div>
+        <div class="timeslot">Moderator</div>
+        <div class="row-fluid">
+            <div class="speakerPic span2"><img src="/assets/speakers/ScottRoth.png" alt=""></div>
+
+            <div class="span9">
+                <div class="row-fluid">
+                    <div class="speakerName span12">{{moderator.name}}</div>
+                </div>
+
+                <div class="row-fluid">
+                    <div class="speakerTitle span12">{{moderator.title}}</div>
+                </div>
+            </div>
+            <div class="row_detail span1">
+                <i class="icon-chevron-right"
+                   style="background-image: url(/assets/glyphicons-halflings.png) !important;"></i>
+            </div>
+        </div>
     </div>
 
     <div class="panelists">
-        <span>Panelists</span>
-    {{#each panelists}}
-        <div class="panelist">
-             <img src="/assets/speakers/rscott.jpg" alt="">
-            <div class="speakerName">{{name}}</div>
-            <div class="speakerTitle">{{title}}</div>
+        <div class="timeslot">Panelists</div>
+
+        {{#each panelists}}
+        <div class="row-fluid">
+            <div class="speakerPic span2"><img src="/assets/speakers/Rob Pal.jpg" alt=""></div>
+
+            <div class="span9">
+                <div class="row-fluid">
+                    <div class="speakerName span12">{{name}}</div>
+                </div>
+
+                <div class="row-fluid">
+                    <div class="speakerTitle span12">{{title}}</div>
+                </div>
+            </div>
+            <div class="row_detail span1">
+                <i class="icon-chevron-right"
+                   style="background-image: url(/assets/glyphicons-halflings.png) !important;"></i>
+            </div>
+
         </div>
-    {{/each}}
+        <hr>
+        {{/each}}
     </div>
 
 </div>

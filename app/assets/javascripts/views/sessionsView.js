@@ -54,11 +54,13 @@ define([
             this.collection.each(this.addOne);
         },
         addOne:function (model) {
+            console.log('addOne');
             view = new SessionView({model:model});
             view.render();
             //console.log(view.el);
 
             $(this.el).prepend(view.el);
+            //console.log(view.el);
             model.bind('remove', view.remove);
         }
 

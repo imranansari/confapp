@@ -3,10 +3,26 @@
     <hr>
     <div>{{location}}</div>
     <hr>
+
     <div class="sessionSpeaker">
-       <!-- <img src="/assets/speakers/rscott.jpg" alt="">-->
-        <div class="speakerName">{{speaker.name}}</div>
-        <div class="speakerTitle">{{speaker.title}}</div>
+        <div class="timeslot">Speaker</div>
+        <div class="row-fluid">
+            <div class="speakerPic span2"><img src="/assets/speakers/ScottRoth.png" alt=""></div>
+
+            <div class="span9">
+                <div class="row-fluid">
+                    <div class="speakerName span12">{{speaker.name}}</div>
+                </div>
+
+                <div class="row-fluid">
+                    <div class="speakerTitle span12">{{speaker.title}}</div>
+                </div>
+            </div>
+            <div class="row_detail span1">
+                <i class="icon-chevron-right"
+                   style="background-image: url(/assets/glyphicons-halflings.png) !important;"></i>
+            </div>
+        </div>
     </div>
 
 </div>

@@ -19,7 +19,16 @@ define([
             this.model.bind('destroy', this.remove);
         },
         render:function () {
-            var content = this.template(this.model.toJSON());
+
+            var participantProfile;
+
+            if (this.model.get('type') == "Presentation"){
+                participantProfile = this.model.get("speaker");
+            } else if (this.model.get('type') == "Panel"){
+                participantProfile = this.model.get("moderator");
+            }
+
+            var content = this.template(participantProfile);
 
             $(this.el).html(content);
 
