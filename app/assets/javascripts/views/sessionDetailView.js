@@ -29,9 +29,31 @@ define([
             this.model.bind('destroy', this.remove);
         },
         render:function () {
+
             var content = this.template(this.model.toJSON());
 
+            try {
+                window.scroll.destroy();
+            } catch (e) {
+                //fix this later
+            }
+
+            window.scroll = new iScroll('wrapper', {
+                vScrollbar:false,
+                hScrollbar:false,
+                hScroll:false,
+                useTransform:false,
+                onBeforeScrollStart:function (e) {
+                    var target = e.target;
+                    while (target.nodeType != 1) target = target.parentNode;
+
+                    if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA')
+                        e.preventDefault();
+                }
+            });
+
             $(this.el).html(content);
+
 
             $(this.el).show(0, function () {
                 window.scroll.refresh();

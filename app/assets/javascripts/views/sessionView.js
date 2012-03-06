@@ -21,6 +21,7 @@ define([
         render:function () {
             var content = this.template(this.model.toJSON());
 
+            $("#header2").show();
             $(this.el).html(content);
 
             return this;

@@ -40,7 +40,9 @@ define([
             var myModel = window.sessionsCollection.get(id);
             console.log(myModel);
 
-            $(".toolbar").html(myModel.get("name"));
+            //$(".toolbar").html(myModel.get("name"));
+            $("#header2").hide();
+
             $('#agendaList').html('');
 
             window.sessionDetailView = new SessionDetailView({model:myModel});
@@ -100,6 +102,7 @@ define([
 
             window.speakerDetailView = new SpeakerDetailView({model:myModel});
 
+            $("#header2").hide();
             $('#agendaList').html('');
             $('#agendaList').append(speakerDetailView.render().el);
 
@@ -108,7 +111,7 @@ define([
         },
 
         displayNewQuestion:function () {
-            $(".toolbar").html("Post New Question");
+            $("#header2").hide();
             $('#agendaList').html('');
             window.newQuestionView = new NewQuestionView();
             $('#agendaList').append(newQuestionView.render().el);

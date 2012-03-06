@@ -18,9 +18,15 @@ define([
             this.template = Handlebars.compile(htmlTpl);
         },
         render:function () {
+
+            try {
+                window.scroll.destroy();
+            } catch (e) {
+                //fix this later
+            }
+
             var content = this.template();
             $(this.el).html(content);
-            //Backbone.ModelBinding.bind(this);
             return this;
         },
 
