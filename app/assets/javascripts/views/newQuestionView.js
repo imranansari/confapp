@@ -38,6 +38,18 @@ define([
         postNewQuestion:function () {
             questionDesc = $('#questionDesc').val();
             questionPanelType = $('#questionPanelType').val();
+
+            if(questionDesc.trim()  === "") {
+                alert("You forgot your question");
+                return;
+            }
+
+            if(questionPanelType === "0") {
+                alert("Please select a Panel for your question");
+                return;
+            }
+
+
             $('#questionDesc').val('');
 
             var questionsCollection = new Questions();
