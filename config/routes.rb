@@ -6,7 +6,7 @@ Confapp::Application.routes.draw do
   get "agenda/index"
   get "agenda/list"
 
-  root :to => "home#index"
+  root :to => "agenda#index"
 
   devise_for :users
   resources :users, :only => :show
@@ -27,6 +27,8 @@ Confapp::Application.routes.draw do
   match 'agenda/create', :to => 'agenda#create', format: :json, :via => :get
   match 'agenda/createpanelist', :to => 'agenda#createPanelist', format: :json, :via => :get
 
+
+  match "*rest" => "agenda#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

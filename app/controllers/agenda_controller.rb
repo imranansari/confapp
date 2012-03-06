@@ -81,7 +81,8 @@ class AgendaController < ApplicationController
 
         #jsonData = File.read(File.join('public/data', 'agenda1.json'))
         #jsonData = File.read(File.join('public/data', 'agenda-tue.json'))
-        jsonData = File.read(File.join('public/data', 'agenda-wed.json'))
+        #jsonData = File.read(File.join('public/data', 'agenda-wed.json'))
+        jsonData = File.read(File.join('public/data', 'agenda-final.json'))
 
         #puts jsonData
 

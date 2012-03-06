@@ -30,7 +30,8 @@ define([
             "agenda/newquestion":"displayNewQuestion",
             "agenda/day/:day":"displayAgendaForDay",
             "agenda/index":"getAgendaList",
-            "speaker/profile/:id":"getSpeakerInfo"
+            "speaker/profile/:id":"getSpeakerInfo",
+            "*actions": "getAgendaList"
         },
         getSessionDetails:function (id) {
             //$("#pageContainer").html("Details");
