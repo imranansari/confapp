@@ -65,6 +65,8 @@ class AgendaController < ApplicationController
             }
           end
 
+          session[:startStr] = session.start.strftime("%y-%m-%d %H:%M:%S")
+
           sessions_with_speakers.push session
           #session[:speakerProfile] = speakerProfile
         }
