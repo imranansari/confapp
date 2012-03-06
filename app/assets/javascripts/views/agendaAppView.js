@@ -83,9 +83,7 @@ define([
             } else {
                 window.sessionsView = new SessionsView({collection:sessionsCollection});
                 sessionsView.render();
-
             }
-
         },
 
         getSpeakerInfo:function (id) {
@@ -112,6 +110,7 @@ define([
 
         displayNewQuestion:function () {
             $("#header2").hide();
+            $("#agendaList").removeAttr("style");
             $('#agendaList').html('');
             window.newQuestionView = new NewQuestionView();
             $('#agendaList').append(newQuestionView.render().el);
