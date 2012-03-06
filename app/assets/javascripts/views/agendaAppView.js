@@ -31,21 +31,20 @@ define([
             "agenda/day/:day":"displayAgendaForDay",
             "agenda/index":"getAgendaList",
             "speaker/profile/:id":"getSpeakerInfo",
-            "*actions": "getAgendaList"
+            "*actions":"getAgendaList"
         },
         getSessionDetails:function (id) {
             //$("#pageContainer").html("Details");
             //window.sessionsView.remove();
 
-            //window.scroll = new iScroll('wrapper', { vScrollbar:false, hScrollbar:false, hScroll:false });
             var myModel = window.sessionsCollection.get(id);
             console.log(myModel);
 
             $(".toolbar").html(myModel.get("name"));
             $('#agendaList').html('');
 
-                window.sessionDetailView = new SessionDetailView({model:myModel});
-                $('#agendaList').append(sessionDetailView.render().el);
+            window.sessionDetailView = new SessionDetailView({model:myModel});
+            $('#agendaList').append(sessionDetailView.render().el);
 
 
             window.scroll.refresh();
@@ -62,7 +61,7 @@ define([
                 window.newQuestionView.remove();
             }
 
-            if(window.sessionsCollection == undefined){
+            if (window.sessionsCollection == undefined) {
                 window.sessionsCollection = new Sessions();
                 sessionsCollection.fetch({
                     success:function (sessionsCollection) {
@@ -71,8 +70,8 @@ define([
 
                         //$("#wrapper").html('<ul id="agendaList" class="agenda-icon-list"> ');
 
-/*                        window.sessionsView = new SessionsView({collection:sessionsCollection});
-                        sessionsView.render();*/
+                        /*                        window.sessionsView = new SessionsView({collection:sessionsCollection});
+                         sessionsView.render();*/
 
                         window.appRouter.navigate("agenda/day/03-12", true);
 
@@ -108,14 +107,14 @@ define([
             //window.scroll.refresh();
         },
 
-        displayNewQuestion:function(){
+        displayNewQuestion:function () {
             $(".toolbar").html("Post New Question");
             $('#agendaList').html('');
             window.newQuestionView = new NewQuestionView();
             $('#agendaList').append(newQuestionView.render().el);
         },
 
-        displayAgendaForDay:function(day){
+        displayAgendaForDay:function (day) {
             //alert('displayAgendaForDay '+ day);
             $('#agendaList').html('');
             var mondayCollection = new Sessions(sessionsCollection.getSessionsByDate(day));
@@ -148,12 +147,12 @@ define([
             window.appRouter.navigate("agenda/day/03-12", true);
         });
 
-        $("#postQuestionButton").click(function(){
+        $("#postQuestionButton").click(function () {
             window.appRouter.navigate("agenda/newquestion", true);
         });
 
-        $(".dateFilter").click(function(){
-            window.appRouter.navigate("agenda/day/"+$(this).data("date"), true)
+        $(".dateFilter").click(function () {
+            window.appRouter.navigate("agenda/day/" + $(this).data("date"), true)
         });
 
         //sessionsCollection = new Sessions();
@@ -178,31 +177,13 @@ define([
          }
          });*/
 
-
     });
 
-    function loaded() {
-        window.scroll = new iScroll('wrapper', {
-                    vScrollbar:false,
-                    hScrollbar:false,
-                    hScroll:false,
-                    useTransform: false,
-                    onBeforeScrollStart: function (e) {
-                        var target = e.target;
-                        while (target.nodeType != 1) target = target.parentNode;
 
-                        if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA')
-                            e.preventDefault();
-                    }
-                });
-            }
+    document.addEventListener('touchmove', function (e) {
+        e.preventDefault();
+    }, false);
 
-
-            document.addEventListener('touchmove', function (e) {
-                e.preventDefault();
-            }, false);
-
-            document.addEventListener('DOMContentLoaded', loaded, false);
 
     var AgendaAppView = Backbone.View.extend({
 

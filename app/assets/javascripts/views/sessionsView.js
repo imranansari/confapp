@@ -12,9 +12,9 @@ define([
 
     var SessionsView = Backbone.View.extend({
 
-        tagName : "ul",
+        tagName:"ul",
         //className : "agenda-icon-list",
-        el : $('#agendaList'),
+        el:$('#agendaList'),
 
         initialize:function (options) {
             _.bindAll(this, 'render', 'addAll', 'addOne');
@@ -24,29 +24,29 @@ define([
             //$(this.el).html(this.template());
             this.addAll();
 
-            $(this.el).show(0, function(){
-                //window.scroll = new iScroll('wrapper', { vScrollbar:false, hScrollbar:false, hScroll:false });
-                window.scroll = new iScroll('wrapper', {
-                    vScrollbar:false,
-                    hScrollbar:false,
-                    hScroll:false,
-                            useTransform: false,
-                            onBeforeScrollStart: function (e) {
-                                var target = e.target;
-                                while (target.nodeType != 1) target = target.parentNode;
+            try {
+                window.scroll.destroy();
+            } catch (e) {
+                //fix this later
+            }
 
-                                if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA')
-                                    e.preventDefault();
-                            }
-                        });
+            window.scroll = new iScroll('wrapper', {
+                vScrollbar:false,
+                hScrollbar:false,
+                hScroll:false,
+                useTransform:false,
+                onBeforeScrollStart:function (e) {
+                    var target = e.target;
+                    while (target.nodeType != 1) target = target.parentNode;
 
-
-                    document.addEventListener('touchmove', function (e) {
+                    if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA')
                         e.preventDefault();
-                    }, false);
+                }
+            });
 
+            $(this.el).show(0, function () {
                 window.scroll.refresh();
-             });
+            });
 
             return this;
         },
