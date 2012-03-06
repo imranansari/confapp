@@ -5,8 +5,9 @@ define([
     'handlebars',
     'modelbinding',
     'text!templates/sessionDetail.html',
-    'text!templates/sessionPanelDetail.html'
-], function ($, _, Backbone, handlebars, modelbinding, sessionDetailTpl, sessionPanelDetailTpl) {
+    'text!templates/sessionPanelDetail.html',
+    'text!templates/sessionActivityDetail.html'
+], function ($, _, Backbone, handlebars, modelbinding, sessionDetailTpl, sessionPanelDetailTpl, sessionActivityDetailTpl) {
 
 
     var SessionView = Backbone.View.extend({
@@ -18,8 +19,10 @@ define([
             console.log(this.model.get("type"));
             if (this.model.get("type") == "Panel") {
                 this.template = Handlebars.compile(sessionPanelDetailTpl);
-            } else {
+            } else if (this.model.get("type") == "Presentation") {
                 this.template = Handlebars.compile(sessionDetailTpl);
+            } else if (this.model.get("type")  =="Activity"){
+                this.template = Handlebars.compile(sessionActivityDetailTpl);
             }
 
             _.bindAll(this, 'render', 'remove');
