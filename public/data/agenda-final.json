@@ -1,7 +1,7 @@
 [
     {
         "name":"Optional Golf Activity",
-        "desc":"you will have an opportunity to enjoy a \n round of golf with other IT associates.",
+        "desc":"The Grandover Resort has 36 holes of world-class golf built amidst 1,500 acres of oak, pine and dogwood covered hills. As an optional activity on Monday morning, you will have an opportunity to enjoy a round of golf with other IT associates.",
         "start":"2012-03-12 8:00",
         "type":"Activity",
         "location":"The Grandover Resort"
@@ -18,7 +18,7 @@
 
     {
         "name":"Welcome and Opening Remarks",
-        "desc":"",
+        "desc":"Welcome Lincoln Financial Group IT Leaders and Guests, We’re glad that you are able to join us and hope that your stay at the Grandover Resort in Greensboro, North Carolina, is both rejuvenating and educational. This year’s theme is “Reimagining the Role of Information Technology.” We have a full agenda during the next three days, so please take a few minutes to read through the information in this program guide. It includes conference highlights, our agenda and other important information. We look forward to spending this time with you at the Grandover Resort and Conference Center, as it is an excellent facility and provides a truly unique environment for learning and networking. The purpose of the conference is to learn more about the dynamic role that IT plays within the organization, gain insight into IT and business leader strategies and hear first-hand from industry experts on trends in technology to reimagine our role. If we can do anything to make your stay more pleasant, please let us know. Thank you",
         "start":"2012-03-12 13:00",
         "end":"2012-03-12 13:30",
         "type":"Presentation",
@@ -45,22 +45,23 @@
         "location":""
     },
 
-
     {
         "name":"Future of Shared Services / Information Technology",
-        "desc":"",
+        "desc":"Ken Solon will provide overviews and updates on IT and Shared Services strategies that will lead IT and Lincoln into the future",
         "start":"2012-03-12 15:30",
         "end":"2012-03-12 16:00",
         "type":"Panel",
+        "speaker_id":"4f5505813cd7252cbb000022",
         "location":"Grandville Ballroom, 1st Floor (Room C&D)"
     },
 
     {
         "name":"It’s a Social World!",
-        "desc":"",
+        "desc":"Tricia Blair will discuss how the world has gone social media crazy. Facebook has 800 million users, Twitter was 27 minutes ahead of CNN announcing the death of Whitney Houston, and social media sites continue to influence and document the strength of the human community around the globe. But what does all that mean for Lincoln Financial? How is social media changing the way we do business today, and how will it influence the way we do business in the future? As Chief Digital Officer and Head of Marketing Operations Solutions, Tricia is helping Lincoln Financial find its place in the social media world, and with a Facebook page and a Twitter feed, we’re on our way. Tricia will discuss Lincoln’s social media strategy and what the future looks like in an increasingly connected and social world. She’ll also talk about digital marketing and how Lincoln Financial is focused on creating an online presence that promotes corporate visibility and the Lincoln Financial brand, enhances the customer experience and drives new business.",
         "start":"2012-03-12 16:00",
         "end":"2012-03-12 16:45",
         "type":"Presentation",
+        "speaker_id":"4f5502f33cd7252cbb000004",
         "location":"Grandville Ballroom, 1st Floor (Room C&D)"
     },
 
@@ -92,19 +93,21 @@
 
     {
         "name":"Global Delivery Models",
-        "desc":"",
+        "desc":"First, hear from industry leader Andrew Peel, Alsbridge Managing Director, on Global Delivery Models. Andrew is a proven expert in aligning and delivering optimized operations strategies using technology and process disciplines with expertise in all phases of the strategic sourcing lifecycle, including feasibility, design, build, transition and optimization for captives, outsourced and shared service centers. Jeff Scofield, VP, IBM Global Business Services, will then discuss IBM’s perspective on global delivery and will relate this to our new IBM sourcing relationship and how these changes will set us up for continued success in the delivery of application managed services. Finally, Brendan Malley will moderate a Global Deliver/Lincoln AMS Q&A session with Andrew and Jeff.",
         "start":"2012-03-13 8:30",
         "end":"2012-03-13 9:00",
         "type":"Presentation",
+        "speaker_id":"4f5507793cd7252fb7000003",
         "location":"Grandville Ballroom, 1st Floor (Room C&D)"
     },
 
     {
         "name":"Lincoln AMS Update",
-        "desc":"",
+        "desc":"First, hear from industry leader Andrew Peel, Alsbridge Managing Director, on Global Delivery Models. Andrew is a proven expert in aligning and delivering optimized operations strategies using technology and process disciplines with expertise in all phases of the strategic sourcing lifecycle, including feasibility, design, build, transition and optimization for captives, outsourced and shared service centers. Jeff Scofield, VP, IBM Global Business Services, will then discuss IBM’s perspective on global delivery and will relate this to our new IBM sourcing relationship and how these changes will set us up for continued success in the delivery of application managed services. Finally, Brendan Malley will moderate a Global Deliver/Lincoln AMS Q&A session with Andrew and Jeff.",
         "start":"2012-03-13 9:00",
         "end":"2012-03-13 9:30",
         "type":"Presentation",
+        "speaker_id":"4f5507d53cd7252fd3000007",
         "location":"Grandville Ballroom, 1st Floor (Room C&D)"
     },
 
@@ -130,19 +133,21 @@
 
     {
         "name":"Enterprise QA/Testing at Lincoln Financial Group",
-        "desc":"",
+        "desc":"At the IT Leadership Forum last year, we committed to performing an assessment of the current state of QA/Testing, using an objective third party to review how Lincoln Financial is performing versus industry best practices. In August 2011 we kicked off the first of three assessments partnering with Cognizant, the last of which finished in January 2012. The three studies looked at our use of HP Quality Center (Test Management Tool), our use of Test Automation, and the current state of QA/Testing. This presentation by Tracy Ortgies will review the findings from the three studies and outline next steps for improving QA/Testing at Lincoln Financial",
         "start":"2012-03-13 10:30",
         "end":"2012-03-13 11:15",
         "type":"Presentation",
+        "speaker_id":"4f5504423cd7252cbb000014",
         "location":"Grandville Ballroom, 1st Floor (Room C&D)"
     },
 
     {
         "name":"Data Security at Lincoln - The Good, Bad, and Ugly!",
-        "desc":"",
+        "desc":"While Lincoln Financial Group continues to make progress on data security, the threat landscape has changed significantly over the last several years – not only increasing at a rapid pace, but almost exponentially. As threats become more sophisticated and efficient, we cannot afford to relax our focus on security. Lincoln’s response to this evolving threat will require security consciousness from everyone in IT. Pat will talk about the new threat realities, the significant security improvements IT made this year and where there are continued challenges. Pat will discuss IT’s role in data security and why it is more critical than ever.",
         "start":"2012-03-13 11:15",
         "end":"2012-03-13 12:00",
         "type":"Presentation",
+        "speaker_id":"4f5504013cd7252cbb000010",
         "location":"Grandville Ballroom, 1st Floor (Room C&D)"
     },
 
@@ -157,10 +162,12 @@
 
     {
         "name":"Business Leader Panel",
-        "desc":"",
+        "desc":"Rob Pal will moderate a panel discussion with Corporate Leadership Group members Jamie DePeau, Bob Scheppegrell, Joel Schwartz and Casey Trumble that provides overviews of business strategies, answers questions about the role IT plays in the future, and takes questions from conference participants.",
         "start":"2012-03-13 13:00",
         "end":"2012-03-13 14:00",
         "type":"Presentation",
+        "moderator_id":"4f522c1cfd86060286000070",
+        "panelist_ids":["4f523112fd860602860000a0", "4f523135fd860602860000a2"],
         "location":"Grandville Ballroom, 1st Floor (Room C&D)"
     },
 
@@ -175,10 +182,11 @@
 
     {
         "name":"Leadership Communication",
-        "desc":"",
+        "desc":"Effective influential communication is the hallmark of great leaders. In this session, led by Dafna Eylon, participants will identify their communication styles and learn how to best deliver key messages to their audiences. Using a highly interactive format including discussion, exercises, and a powerful communication instrument, participants explore and practice different styles and their impact. In addition, participants will discover how they can best deliver leadership messages relating to performance, delivery, and development. Learning Objectives: • Identifying personal communication style(s) and how to effectively communicate with others’ dominant styles. • Learning about, and building on your personal communication strengths for a variety of different audiences and diverse content. • Engage in a high-energy group exercise allowing clear and direct communication on how to overcome key communication blocks. • Develop communication self-awareness and “know your audience” orientation.",
         "start":"2012-03-13 14:30",
         "end":"2012-03-13 16:30",
         "type":"Presentation",
+        "speaker_id":"4f5506e63cd7252cbb00002a",
         "location":"Grandville Ballroom, 1st Floor (Room C&D)"
     },
 
@@ -199,14 +207,6 @@
     },
 
     {
-        "name":"Leadership Communication",
-        "desc":"",
-        "start":"2012-03-13 14:30",
-        "end":"2012-03-13 16:30",
-        "type":"Presentation",
-        "location":"Grandville Ballroom, 1st Floor (Room C&D)"
-    },
-    {
         "name":"Breakfast",
         "desc":"",
         "start":"2012-03-14 7:00",
@@ -217,20 +217,21 @@
 
     {
         "name":"Competitive Information Technology",
-        "desc":"",
+        "desc":"Irving Tyler, VP and Executive Partner, Gartner, will leverage his 25+ years of experience working in leadership positions at multiple global firms to outline a roadmap of how to increase the business value IT provides. The business demand for IT is ever-increasing, and Irving will discuss why we are uniquely positioned to deliver value to the business — setting us apart from the competition.",
         "start":"2012-03-14 8:00",
         "end":"2012-03-14 9:00",
         "type":"Presentation",
+        "speaker_id":"4f5508363cd7252fd300000b",
         "location":"Grandville Ballroom, 1st Floor (Room C&D)"
     },
 
     {
         "name":"Lincoln Mobile Center of Excellence",
-        "desc":"",
+        "desc":"The mobile environment is moving faster than ever. From the dramatic changes in the mobile phone to the advent of tablet computing, the growth of mobile capabilities is giving consumers an incredible amount computing power. Add to this the availability of social networks, and we are seeing mobile devices filling most consumer computing needs. The Mobile Center Of Excellence was established to address Lincoln’s support, use and development of mobile applications. This presentation will provide an overview on the Center of Excellence and an update on mobile technology at Lincoln, highlighting recent projects that have been completed as well as in-flight initiatives. Additionally, Scott will provide information on how the Center of Excellence team is organized to help drive mobile application development across the enterprise.",
         "start":"2012-03-14 9:00",
         "end":"2012-03-14 9:30",
         "type":"Presentation",
-        "speaker_id":"4f523112fd860602860000a0",
+        "speaker_id":"4f5504f03cd7252cbb00001c",
         "location":"Grandville Ballroom, 1st Floor (Room C&D)"
     },
 
@@ -240,6 +241,7 @@
         "start":"2012-03-14 9:30",
         "end":"2012-03-14 10:00",
         "type":"Presentation",
+        "speaker_id":"4f5503d53cd7252cbb00000e",
         "location":"Grandville Ballroom, 1st Floor (Room C&D)"
     },
 
@@ -254,7 +256,7 @@
 
     {
         "name":"IT Vice President Panel",
-        "desc":"",
+        "desc":"Dave Rose will moderate this panel discussion with Information Technology VPs Ron Reed, JJ Jonnada, John Kelly and Steve Hamilton where they talk about what keeps them up at night, what drives innovation in their respective departments, how they champion change while balancing risks and deliverables as well as how they are leading from the front. There will also be an opportunity for questions and answers, so come prepared with questions you may want to ask.",
         "start":"2012-03-14 10:30",
         "end":"2012-03-14 11:30",
         "type":"Panel",
@@ -272,20 +274,11 @@
 
     {
         "name":"Interactive Workshops - Forrester moderated",
-        "desc":"",
+        "desc":"This year, the break-out sessions are going to be structured as workshops focusing on contemporary topics and moderated by industry leading experts from Forrester.",
         "start":"2012-03-14 12:00",
         "end":"2012-03-14 13:00",
         "type":"Activity",
         "location":"Grandville Ballroom, 1st Floor (Room A&B)"
-    },
-
-    {
-        "name":"Business Leader Panel",
-        "desc":"",
-        "start":"2012-03-14 13:00",
-        "end":"2012-03-14 14:00",
-        "type":"Presentation",
-        "location":"See Room Assignments"
     },
 
     {
@@ -303,16 +296,18 @@
         "start":"2012-03-14 14:30",
         "end":"2012-03-14 15:00",
         "type":"Presentation",
+        "speaker_id":"4f55032f3cd7252cbb000006",
         "location":"Grandville Ballroom, 1st Floor (Room C&D)"
     },
 
 
     {
         "name":"Motivational Speaker",
-        "desc":"",
+        "desc":"Ross is one of the most sought-after keynote speakers and seminar leaders on the subjects of Customer Urgency and Empathy, Personal Motivation, Reinvention, and Market Relevance, and will close out the conference on a high note, with humor and inspirational messages for being more successful. Ross has produced 14 Human Resource training films on Customer Service, Motivation, Leadership, and Peer Pressure. He has authored the business books, Nobody Moved Your Cheese, Customer Empathy, The Customer Shouts Back, Are You Relevant?, 12 Reasons Smart Organizations Thrive in Any Economy and the recently released Grab More Market Share: How to Wrangle Business Away from Lazy Competitors",
         "start":"2012-03-14 15:00",
         "end":"2012-03-14 16:00",
         "type":"Presentation",
+        "speaker_id":"4f5508093cd7252fd3000009",
         "location":"Grandville Ballroom, 1st Floor (Room C&D)"
     },
 
@@ -321,7 +316,7 @@
         "desc":"",
         "start":"2012-03-14 16:00",
         "type":"Presentation",
+        "speaker_id":"4f54eafd3cd7251e95000003",
         "location":"Grandville Ballroom, 1st Floor (Room C&D)"
     }
-
 ]
