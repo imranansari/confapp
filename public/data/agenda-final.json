@@ -260,6 +260,8 @@
         "start":"2012-03-14 10:30",
         "end":"2012-03-14 11:30",
         "type":"Panel",
+        "moderator_id":"4f5504c53cd7252cbb00001a",
+        "panelist_ids":["4f5504993cd7252cbb000018", "4f5503b43cd7252cbb00000c", "4f5503d53cd7252cbb00000e", "4f5503933cd7252cbb00000a"],
         "location":"Grandville Ballroom, 1st Floor (Room C&D)"
     },
 
