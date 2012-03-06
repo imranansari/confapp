@@ -1,0 +1,327 @@
+[
+    {
+        "name":"Optional Golf Activity",
+        "desc":"you will have an opportunity to enjoy a \n round of golf with other IT associates.",
+        "start":"2012-03-12 8:00",
+        "type":"Activity",
+        "location":"The Grandover Resort"
+    },
+
+    {
+        "name":"Lunch",
+        "desc":"",
+        "start":"2012-03-12 12:00",
+        "end":"2012-03-12 13:00",
+        "type":"Activity",
+        "location":"Grandville Ballroom, 1st Floor (Room A&B)"
+    },
+
+    {
+        "name":"Welcome and Opening Remarks",
+        "desc":"",
+        "start":"2012-03-12 13:00",
+        "end":"2012-03-12 13:30",
+        "type":"Presentation",
+        "speaker_id":"4f54eafd3cd7251e95000003",
+        "location":"Grandville Ballroom, 1st Floor (Room C&D)"
+    },
+
+    {
+        "name":"A New Kind of World",
+        "desc":"The Lincoln Financial IT organization depends upon the performance of our people and our teams. Thornton May is a futurist, educator and author. His extensive experience researching and consulting on the role and behaviors of “C” level executives in creating value with information technology has won him an unquestioned place on the short list of serious thinkers on this topic. Thornton combines a scholar’s patience for empirical research, a stand-up comic’s capacity for pattern recognition and a second-to-none gift for storytelling to address the information technology management problems facing executives. Thornton May will draw upon his experience to inspire us in a high impact keynote presentation that will help us address changes in the world of information technology and educate us on the skill sets required to lead IT and the organization into the future.",
+        "start":"2012-03-12 13:30",
+        "end":"2012-03-12 15:00",
+        "type":"Presentation",
+        "speaker_id":"4f5507133cd7252cbb00002c",
+        "location":"Grandville Ballroom, 1st Floor (Room C&D)"
+    },
+
+    {
+        "name":"Break",
+        "desc":"",
+        "start":"2012-03-12 15:00",
+        "end":"2012-03-12 15:30",
+        "type":"Activity",
+        "location":""
+    },
+
+
+    {
+        "name":"Future of Shared Services / Information Technology",
+        "desc":"",
+        "start":"2012-03-12 15:30",
+        "end":"2012-03-12 16:00",
+        "type":"Panel",
+        "location":"Grandville Ballroom, 1st Floor (Room C&D)"
+    },
+
+    {
+        "name":"It’s a Social World!",
+        "desc":"",
+        "start":"2012-03-12 16:00",
+        "end":"2012-03-12 16:45",
+        "type":"Presentation",
+        "location":"Grandville Ballroom, 1st Floor (Room C&D)"
+    },
+
+    {
+        "name":"Reception",
+        "desc":"",
+        "start":"2012-03-12 17:30",
+        "type":"Activity",
+        "location":"Carlisle Ballroom, 1st Floor"
+    },
+
+
+    {
+        "name":"Casino Night",
+        "desc":"",
+        "start":"2012-03-12 20:00",
+        "type":"Activity",
+        "location":"Grandville Ballroom, 2nd Floor (Room A&B)"
+    },
+
+    {
+        "name":"Breakfast",
+        "desc":"",
+        "start":"2012-03-13 7:30",
+        "end":"2012-03-13 8:30",
+        "type":"Activity",
+        "location":"Grandville Ballroom, 1st Floor (Room A&B)"
+    },
+
+    {
+        "name":"Global Delivery Models",
+        "desc":"",
+        "start":"2012-03-13 8:30",
+        "end":"2012-03-13 9:00",
+        "type":"Presentation",
+        "location":"Grandville Ballroom, 1st Floor (Room C&D)"
+    },
+
+    {
+        "name":"Lincoln AMS Update",
+        "desc":"",
+        "start":"2012-03-13 9:00",
+        "end":"2012-03-13 9:30",
+        "type":"Presentation",
+        "location":"Grandville Ballroom, 1st Floor (Room C&D)"
+    },
+
+    {
+        "name":"Global Delivery/Lincoln AMS Q&A",
+        "desc":"",
+        "start":"2012-03-13 9:30",
+        "end":"2012-03-13 10:00",
+        "type":"Panel",
+        "moderator_id":"4f522c1cfd86060286000070",
+        "panelist_ids":["4f523112fd860602860000a0", "4f523135fd860602860000a2"],
+        "location":"?"
+    },
+
+    {
+        "name":"Break",
+        "desc":"",
+        "start":"2012-03-13 10:00",
+        "end":"2012-03-13 10:30",
+        "type":"Activity",
+        "location":""
+    },
+
+    {
+        "name":"Enterprise QA/Testing at Lincoln Financial Group",
+        "desc":"",
+        "start":"2012-03-13 10:30",
+        "end":"2012-03-13 11:15",
+        "type":"Presentation",
+        "location":"Grandville Ballroom, 1st Floor (Room C&D)"
+    },
+
+    {
+        "name":"Data Security at Lincoln - The Good, Bad, and Ugly!",
+        "desc":"",
+        "start":"2012-03-13 11:15",
+        "end":"2012-03-13 12:00",
+        "type":"Presentation",
+        "location":"Grandville Ballroom, 1st Floor (Room C&D)"
+    },
+
+    {
+        "name":"Lunch",
+        "desc":"",
+        "start":"2012-03-13 12:00",
+        "end":"2012-03-13 13:00",
+        "type":"Activity",
+        "location":"Grandville Ballroom, 1st Floor (Room A&B)"
+    },
+
+    {
+        "name":"Business Leader Panel",
+        "desc":"",
+        "start":"2012-03-13 13:00",
+        "end":"2012-03-13 14:00",
+        "type":"Presentation",
+        "location":"Grandville Ballroom, 1st Floor (Room C&D)"
+    },
+
+    {
+        "name":"Break",
+        "desc":"",
+        "start":"2012-03-13 14:00",
+        "end":"2012-03-13 14:30",
+        "type":"Activity",
+        "location":""
+    },
+
+    {
+        "name":"Leadership Communication",
+        "desc":"",
+        "start":"2012-03-13 14:30",
+        "end":"2012-03-13 16:30",
+        "type":"Presentation",
+        "location":"Grandville Ballroom, 1st Floor (Room C&D)"
+    },
+
+    {
+        "name":"Reception",
+        "desc":"",
+        "start":"2012-03-13 18:00",
+        "type":"Activity",
+        "location":"Grandville Ballroom Foyer"
+    },
+
+    {
+        "name":"Dinner and IT Leadership Awards Presentation",
+        "desc":"",
+        "start":"2012-03-13 19:00",
+        "type":"Presentation",
+        "location":"Grandville Ballroom, 1st Floor (Room A&B)"
+    },
+
+    {
+        "name":"Leadership Communication",
+        "desc":"",
+        "start":"2012-03-13 14:30",
+        "end":"2012-03-13 16:30",
+        "type":"Presentation",
+        "location":"Grandville Ballroom, 1st Floor (Room C&D)"
+    },
+    {
+        "name":"Breakfast",
+        "desc":"",
+        "start":"2012-03-14 7:00",
+        "end":"2012-03-14 8:00",
+        "type":"Activity",
+        "location":"Grandville Ballroom, 1st Floor (Room A&B)"
+    },
+
+    {
+        "name":"Competitive Information Technology",
+        "desc":"",
+        "start":"2012-03-14 8:00",
+        "end":"2012-03-14 9:00",
+        "type":"Presentation",
+        "location":"Grandville Ballroom, 1st Floor (Room C&D)"
+    },
+
+    {
+        "name":"Lincoln Mobile Center of Excellence",
+        "desc":"",
+        "start":"2012-03-14 9:00",
+        "end":"2012-03-14 9:30",
+        "type":"Presentation",
+        "speaker_id":"4f523112fd860602860000a0",
+        "location":"Grandville Ballroom, 1st Floor (Room C&D)"
+    },
+
+    {
+        "name":"TBD - Availability Management",
+        "desc":"",
+        "start":"2012-03-14 9:30",
+        "end":"2012-03-14 10:00",
+        "type":"Presentation",
+        "location":"Grandville Ballroom, 1st Floor (Room C&D)"
+    },
+
+    {
+        "name":"Break",
+        "desc":"",
+        "start":"2012-03-14 10:00",
+        "end":"2012-03-14 10:30",
+        "type":"Activity",
+        "location":""
+    },
+
+    {
+        "name":"IT Vice President Panel",
+        "desc":"",
+        "start":"2012-03-14 10:30",
+        "end":"2012-03-14 11:30",
+        "type":"Panel",
+        "location":"Grandville Ballroom, 1st Floor (Room C&D)"
+    },
+
+    {
+        "name":"Lunch",
+        "desc":"",
+        "start":"2012-03-14 11:30",
+        "end":"2012-03-14 12:30",
+        "type":"Activity",
+        "location":"Grandville Ballroom, 1st Floor (Room A&B)"
+    },
+
+    {
+        "name":"Interactive Workshops - Forrester moderated",
+        "desc":"",
+        "start":"2012-03-14 12:00",
+        "end":"2012-03-14 13:00",
+        "type":"Activity",
+        "location":"Grandville Ballroom, 1st Floor (Room A&B)"
+    },
+
+    {
+        "name":"Business Leader Panel",
+        "desc":"",
+        "start":"2012-03-14 13:00",
+        "end":"2012-03-14 14:00",
+        "type":"Presentation",
+        "location":"See Room Assignments"
+    },
+
+    {
+        "name":"Break",
+        "desc":"",
+        "start":"2012-03-14 14:00",
+        "end":"2012-03-14 14:30",
+        "type":"Activity",
+        "location":""
+    },
+
+    {
+        "name":"The Best is Yet to Come",
+        "desc":"",
+        "start":"2012-03-14 14:30",
+        "end":"2012-03-14 15:00",
+        "type":"Presentation",
+        "location":"Grandville Ballroom, 1st Floor (Room C&D)"
+    },
+
+
+    {
+        "name":"Motivational Speaker",
+        "desc":"",
+        "start":"2012-03-14 15:00",
+        "end":"2012-03-14 16:00",
+        "type":"Presentation",
+        "location":"Grandville Ballroom, 1st Floor (Room C&D)"
+    },
+
+    {
+        "name":"Closing Remarks",
+        "desc":"",
+        "start":"2012-03-14 16:00",
+        "type":"Presentation",
+        "location":"Grandville Ballroom, 1st Floor (Room C&D)"
+    }
+
+]
