@@ -50,7 +50,7 @@
         "desc":"Ken Solon will provide overviews and updates on IT and Shared Services strategies that will lead IT and Lincoln into the future",
         "start":"2012-03-12 15:30",
         "end":"2012-03-12 16:00",
-        "type":"Panel",
+        "type":"Presentation",
         "speaker_id":"4f5505813cd7252cbb000022",
         "location":"Grandville Ballroom, 1st Floor (Room C&D)"
     },
@@ -117,8 +117,8 @@
         "start":"2012-03-13 9:30",
         "end":"2012-03-13 10:00",
         "type":"Panel",
-        "moderator_id":"4f522c1cfd86060286000070",
-        "panelist_ids":["4f523112fd860602860000a0", "4f523135fd860602860000a2"],
+        "moderator_id":"4f5504233cd7252cbb000012",
+        "panelist_ids":["4f5507793cd7252fb7000003", "4f5507d53cd7252fd3000007"],
         "location":"?"
     },
 
@@ -166,8 +166,8 @@
         "start":"2012-03-13 13:00",
         "end":"2012-03-13 14:00",
         "type":"Presentation",
-        "moderator_id":"4f522c1cfd86060286000070",
-        "panelist_ids":["4f523112fd860602860000a0", "4f523135fd860602860000a2"],
+        "moderator_id":"4f55047b3cd7252cbb000016",
+        "panelist_ids":["4f55035d3cd7252cbb000008", "4f5505153cd7252cbb00001e", "4f5505563cd7252cbb000020", "4f5505a33cd7252cbb000024"],
         "location":"Grandville Ballroom, 1st Floor (Room C&D)"
     },
 
