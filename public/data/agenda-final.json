@@ -165,7 +165,7 @@
         "desc":"Rob Pal will moderate a panel discussion with Corporate Leadership Group members Jamie DePeau, Bob Scheppegrell, Joel Schwartz and Casey Trumble that provides overviews of business strategies, answers questions about the role IT plays in the future, and takes questions from conference participants.",
         "start":"2012-03-13 13:00",
         "end":"2012-03-13 14:00",
-        "type":"Presentation",
+        "type":"Panel",
         "moderator_id":"4f55047b3cd7252cbb000016",
         "panelist_ids":["4f55035d3cd7252cbb000008", "4f5505153cd7252cbb00001e", "4f5505563cd7252cbb000020", "4f5505a33cd7252cbb000024"],
         "location":"Grandville Ballroom, 1st Floor (Room C&D)"
