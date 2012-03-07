@@ -1,11 +1,12 @@
 define([
     'jquery',
+    'livequery',
     'underscore',
     'backbone',
     'handlebars',
     'modelbinding',
     'text!templates/speakerDetail.html'
-], function ($, _, Backbone, handlebars, modelbinding, htmlTpl) {
+], function ($, livequery, _, Backbone, handlebars, modelbinding, htmlTpl) {
 
 
     var SpeakerDetailView = Backbone.View.extend({
@@ -53,6 +54,10 @@ define([
             $(this.el).html(content);
 
             $(this.el).show(0, function () {
+                window.scroll.refresh();
+            });
+
+            $('.speakerDetail').livequery(function () {
                 window.scroll.refresh();
             });
 
