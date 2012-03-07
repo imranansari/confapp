@@ -5,12 +5,12 @@ define([
     'handlebars',
     'modelbinding',
     'text!templates/speakerDetail.html'
-], function ($,  _, Backbone, handlebars, modelbinding, htmlTpl) {
+], function ($, _, Backbone, handlebars, modelbinding, htmlTpl) {
 
 
     var SpeakerDetailView = Backbone.View.extend({
 
-        tagName : "li",
+        tagName:"li",
 
         initialize:function (options) {
 
@@ -22,19 +22,39 @@ define([
 
             var participantProfile;
 
-            if (this.model.get('type') == "Presentation"){
+            if (this.model.get('type') == "Presentation") {
                 participantProfile = this.model.get("speaker");
-            } else if (this.model.get('type') == "Panel"){
+            } else if (this.model.get('type') == "Panel") {
                 participantProfile = this.model.get("moderator");
             }
 
             var content = this.template(participantProfile);
 
+            try {
+                window.scroll.destroy();
+            } catch (e) {
+                //fix this later
+            }
+
+            window.scroll = new iScroll('wrapper', {
+                vScrollbar:false,
+                hScrollbar:false,
+                hScroll:false,
+                useTransform:false,
+                onBeforeScrollStart:function (e) {
+                    var target = e.target;
+                    while (target.nodeType != 1) target = target.parentNode;
+
+                    if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA')
+                        e.preventDefault();
+                }
+            });
+
             $(this.el).html(content);
 
-            $(this.el).show(0, function(){
+            $(this.el).show(0, function () {
                 window.scroll.refresh();
-             });
+            });
 
             return this;
         },
