@@ -11,4 +11,7 @@ require(["order!jquery",
 ], function (AgendaAppView) {
     var agendaAppView = new AgendaAppView();
 
+    var debugging = false; // or true
+    if (typeof console == "undefined") var console = { log: function() {} };
+    else if (!debugging || typeof console.log == "undefined") console.log = function() {};
 });
