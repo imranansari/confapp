@@ -1,6 +1,12 @@
 <div class="question">
     <div class="row-fluid message">
-        <div class="span10">{{ model.desc }}</div>
+        <div class="span8">{{ model.desc }}</div>
+        {{# if isAdmin}}
+            <div class="span2">
+                <span>Panel: </span>
+                <span  style="color: blue;">{{ model.panel }}</span>
+            </div>
+        {{/if}}
         <div class="span2">
             {{# if isAdmin}}
                 <div class="moderate_panel">
