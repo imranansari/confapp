@@ -131,7 +131,7 @@ define([
     // Instantiate the router
     window.appRouter = new AppRouter;
     // Start Backbone history a neccesary step for bookmarkable URL's
-    Backbone.history.start({pushState:true});
+    Backbone.history.start();
 
     $(document).ready(function () {
 
