@@ -6,11 +6,19 @@
 
   <link rel="apple-touch-icon" href="/assets/linc.jpg"/>
 
+  <script language="JavaScript">
+    var debugging = false;
+    if (typeof console == "undefined") var console = { log: function() {} };
+    else if (!debugging || typeof console.log == "undefined") console.log = function() {};
+  </script>
+  
+  
   <%= requirejs_include_tag "agenda_app" %>
   <%= csrf_meta_tags %>
 
   <%= stylesheet_link_tag "bootstrap" %>
   <%= stylesheet_link_tag "agenda" %>
+  
 
 </head>
 
