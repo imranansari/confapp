@@ -31,7 +31,8 @@ define([
         },
 
         events:{
-            "click #postNewQuestion":"postNewQuestion"
+            "click #postNewQuestion":"postNewQuestion",
+            "click #cancelNewQuestion":"cancelNewQuestion"
         },
 
 
@@ -53,7 +54,14 @@ define([
             $('#questionDesc').val('');
 
             var questionsCollection = new Questions();
-            questionsCollection.create({desc: questionDesc, panel: questionPanelType});
+            var model = questionsCollection.create({desc: questionDesc, panel: questionPanelType});
+            if (model != false){
+                alert("Question Submitted");
+            }
+        },
+
+        cancelNewQuestion:function(){
+            window.appRouter.navigate("agenda/day/03-12", true);
         }
 
     });

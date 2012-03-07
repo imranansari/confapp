@@ -1,11 +1,4 @@
 <div class="sessionDetail">
-    <div>{{desc}}</div>
-    <hr>
-    <div><i class="icon-map-marker"
-            style="background-image: url(/assets/glyphicons-halflings.png) !important;"></i>
-        {{location}}
-    </div>
-    <hr>
     <div class="sessionSpeaker">
         <div class="timeslot">Moderator</div>
         <div class="row-fluid">
@@ -26,7 +19,7 @@
             </div>
         </div>
     </div>
-
+    <div>{{desc}}</div>
     <div class="panelists">
         <div class="timeslot">Panelists</div>
 
@@ -51,6 +44,11 @@
         </div>
         <hr>
         {{/each}}
+    </div>
+    <div class="timeslot">Location</div>
+    <div><i class="icon-map-marker"
+            style="background-image: url(/assets/glyphicons-halflings.png) !important;"></i>
+        {{location}}
     </div>
 
 </div>
