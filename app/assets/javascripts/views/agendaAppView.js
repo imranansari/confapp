@@ -45,6 +45,7 @@ define([
 
             $('#agendaList').html('');
             $("#wrapper").css("top", "36px");
+            $("#wrapper").css("height", window.innerHeight-36 +"px");
 
             window.sessionDetailView = new SessionDetailView({model:myModel});
             $('#agendaList').append(sessionDetailView.render().el);
@@ -104,6 +105,7 @@ define([
             $("#header2").hide();
             $('#agendaList').html('');
             $("#wrapper").css("top", "36px");
+            $("#wrapper").css("height", window.innerHeight-36 +"px");
             $('#agendaList').append(speakerDetailView.render().el);
 
 
@@ -123,6 +125,7 @@ define([
             //alert('displayAgendaForDay '+ day);
             $('#agendaList').html('');
             $("#wrapper").css("top", "70px");
+            $("#wrapper").css("height", window.innerHeight-70 +"px");
             var mondayCollection = new Sessions(sessionsCollection.getSessionsByDate(day));
 
             //alert(mondayCollection.length);
