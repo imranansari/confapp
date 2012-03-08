@@ -55,7 +55,7 @@ define([
             window.scroll.refresh();
         },
 
-        getAgendaList:function (id) {
+        getAgendaList:function () {
             console.log("show agenda list");
 
             if (window.sessionDetailView != undefined) {
@@ -128,6 +128,11 @@ define([
             $('#wrapper ul').css("background-color", "white");
             $("#wrapper").css("top", "70px");
             $("#wrapper").css("height", window.innerHeight-70 +"px");
+
+            if(window.sessionsCollection == undefined){
+                this.getAgendaList();
+                return;
+            }
             var mondayCollection = new Sessions(sessionsCollection.getSessionsByDate(day));
 
             //alert(mondayCollection.length);

@@ -46,7 +46,7 @@
     },
 
     {
-        "name":"Future of Shared Services / Information Technology",
+        "name":"Shared Services/Information Technology Update",
         "desc":"Ken Solon will provide overviews and updates on IT and Shared Services strategies that will lead IT and Lincoln into the future",
         "start":"2012-03-12 15:30",
         "end":"2012-03-12 16:00",
@@ -73,13 +73,21 @@
         "location":"Carlisle Ballroom, 1st Floor"
     },
 
+    {
+        "name":"Dinner",
+        "desc":"",
+        "start":"2012-03-12 18:30",
+        "type":"Activity",
+        "location":"Griffin Room, 1st Floor"
+    },
+
 
     {
-        "name":"Casino Night",
+        "name":"Game Night",
         "desc":"",
         "start":"2012-03-12 20:00",
         "type":"Activity",
-        "location":"Grandville Ballroom, 2nd Floor (Room A&B)"
+        "location":"Carlisle Ballroom 2nd floor (Room A&B)"
     },
 
     {
@@ -119,7 +127,7 @@
         "type":"Panel",
         "moderator_id":"4f5504233cd7252cbb000012",
         "panelist_ids":["4f5507793cd7252fb7000003", "4f5507d53cd7252fd3000007"],
-        "location":"?"
+        "location":"Grandville Ballroom 1st Floor (Room C&D)"
     },
 
     {
@@ -203,7 +211,7 @@
         "desc":"",
         "start":"2012-03-13 19:00",
         "type":"Activity",
-        "location":"Grandville Ballroom, 1st Floor (Room A&B)"
+        "location":"Grandville Ballroom, 1st Floor (Room C&D)"
     },
 
     {
@@ -216,7 +224,7 @@
     },
 
     {
-        "name":"Competitive Information Technology",
+        "name":"Competitive IT",
         "desc":"Irving Tyler, VP and Executive Partner, Gartner, will leverage his 25+ years of experience working in leadership positions at multiple global firms to outline a roadmap of how to increase the business value IT provides. The business demand for IT is ever-increasing, and Irving will discuss why we are uniquely positioned to deliver value to the business — setting us apart from the competition.",
         "start":"2012-03-14 8:00",
         "end":"2012-03-14 9:00",
@@ -236,7 +244,7 @@
     },
 
     {
-        "name":"TBD - Availability Management",
+        "name":"Infrastructure Reporting Tools Update",
         "desc":"",
         "start":"2012-03-14 9:30",
         "end":"2012-03-14 10:00",
@@ -255,7 +263,7 @@
     },
 
     {
-        "name":"IT Vice President Panel",
+        "name":"IT Leadership Panel",
         "desc":"Dave Rose will moderate this panel discussion with Information Technology VPs Ron Reed, JJ Jonnada, John Kelly and Steve Hamilton where they talk about what keeps them up at night, what drives innovation in their respective departments, how they champion change while balancing risks and deliverables as well as how they are leading from the front. There will also be an opportunity for questions and answers, so come prepared with questions you may want to ask.",
         "start":"2012-03-14 10:30",
         "end":"2012-03-14 11:30",
@@ -277,8 +285,8 @@
     {
         "name":"Interactive Workshops - Forrester moderated",
         "desc":"This year, the break-out sessions are going to be structured as workshops focusing on contemporary topics and moderated by industry leading experts from Forrester.",
-        "start":"2012-03-14 12:00",
-        "end":"2012-03-14 13:00",
+        "start":"2012-03-14 12:30",
+        "end":"2012-03-14 14:00",
         "type":"Activity",
         "location":"Grandville Ballroom, 1st Floor (Room A&B)"
     },
@@ -304,7 +312,7 @@
 
 
     {
-        "name":"Motivational Speaker",
+        "name":"Nobody Moved Your Cheese",
         "desc":"Ross is one of the most sought-after keynote speakers and seminar leaders on the subjects of Customer Urgency and Empathy, Personal Motivation, Reinvention, and Market Relevance, and will close out the conference on a high note, with humor and inspirational messages for being more successful. Ross has produced 14 Human Resource training films on Customer Service, Motivation, Leadership, and Peer Pressure. He has authored the business books, Nobody Moved Your Cheese, Customer Empathy, The Customer Shouts Back, Are You Relevant?, 12 Reasons Smart Organizations Thrive in Any Economy and the recently released Grab More Market Share: How to Wrangle Business Away from Lazy Competitors",
         "start":"2012-03-14 15:00",
         "end":"2012-03-14 16:00",
