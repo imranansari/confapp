@@ -44,6 +44,7 @@ define([
             $("#header2").hide();
 
             $('#agendaList').html('');
+            $('#wrapper ul').css("background-color", "#f5f5f5");
             $("#wrapper").css("top", "36px");
             $("#wrapper").css("height", window.innerHeight-36 +"px");
 
@@ -124,6 +125,7 @@ define([
         displayAgendaForDay:function (day) {
             //alert('displayAgendaForDay '+ day);
             $('#agendaList').html('');
+            $('#wrapper ul').css("background-color", "white");
             $("#wrapper").css("top", "70px");
             $("#wrapper").css("height", window.innerHeight-70 +"px");
             var mondayCollection = new Sessions(sessionsCollection.getSessionsByDate(day));

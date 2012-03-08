@@ -13,7 +13,6 @@ define([
     var SessionsView = Backbone.View.extend({
 
         tagName:"ul",
-        //className : "agenda-icon-list",
         el:$('#agendaList'),
 
         initialize:function (options) {

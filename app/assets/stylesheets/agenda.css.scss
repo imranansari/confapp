@@ -12,7 +12,7 @@ ul {
 #wrapper ul {
   clear: both;
   list-style-type: none;
-  background: #FFFFFF;
+  background-color: #f5f5f5;
   width: 100%;
 }
 
@@ -226,10 +226,10 @@ ul {
 
 .timeslot {
   width: 100%;
-  background-color: #ECEFF2;
+  background-color: #e7e7e7;
   position: relative;
   float: right;
-  color: #999;
+  color: #a9a9a9;
   font-size: 14px;
   font-weight: normal;
 }
@@ -286,7 +286,7 @@ display: inline;
 .sessionSpeaker .row_detail {
   position: relative;
   float: right;
-  top: 15px;
+  top: 0px;
   right: 10px;
   opacity:0.4;
 }
@@ -299,13 +299,13 @@ display: inline;
 }
 
 .speakerDetail{
-  color: #666;
-  font-size: 14px;
+  color: #000000;
+  font-size: 13.92px;
   font-weight: normal;
 }
 
 .sessionDetail {
-  color: #666;
+  color: #000000;
   font-size: 14px;
   font-weight: normal;
 }
@@ -313,4 +313,8 @@ display: inline;
 .dateFilter{
   //width: 6.6em;
   width: 26.6%;
+}
+
+.well{
+  background-color: #ffffff !important;
 }
