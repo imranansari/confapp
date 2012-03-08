@@ -44,6 +44,7 @@ define([
             $("#header2").hide();
 
             $('#agendaList').html('');
+            $("#wrapper").css("top", "36px");
 
             window.sessionDetailView = new SessionDetailView({model:myModel});
             $('#agendaList').append(sessionDetailView.render().el);
@@ -102,6 +103,7 @@ define([
 
             $("#header2").hide();
             $('#agendaList').html('');
+            $("#wrapper").css("top", "36px");
             $('#agendaList').append(speakerDetailView.render().el);
 
 
@@ -112,6 +114,7 @@ define([
             $("#header2").hide();
             $("#agendaList").removeAttr("style");
             $('#agendaList').html('');
+            $("#wrapper").css("top", "36px");
             window.newQuestionView = new NewQuestionView();
             $('#agendaList').append(newQuestionView.render().el);
         },
@@ -119,6 +122,7 @@ define([
         displayAgendaForDay:function (day) {
             //alert('displayAgendaForDay '+ day);
             $('#agendaList').html('');
+            $("#wrapper").css("top", "70px");
             var mondayCollection = new Sessions(sessionsCollection.getSessionsByDate(day));
 
             //alert(mondayCollection.length);

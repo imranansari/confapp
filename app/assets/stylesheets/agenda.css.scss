@@ -165,9 +165,14 @@ ul {
 
 .toolbar {
 
-  margin-left: auto;
-  margin-right: auto;
-  width: 75%;
+   //width: 100%;
+   //background-color: red;
+
+  //width: 75%;
+  //margin-left: 2%;
+
+  // width: 50%;
+   //margin: 0px auto;
 }
 
 #header2 > h2 {
@@ -303,4 +308,9 @@ display: inline;
   color: #666;
   font-size: 14px;
   font-weight: normal;
+}
+
+.dateFilter{
+  //width: 6.6em;
+  width: 26.6%;
 }
