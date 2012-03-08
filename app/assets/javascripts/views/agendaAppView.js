@@ -171,6 +171,11 @@ define([
             window.appRouter.navigate("agenda/day/" + $(this).data("date"), true)
         });
 
+
+        $(".sessionPanelist").live('click', function(){
+            window.appRouter.navigate("speaker/profile/" + $(this).data("id"), true);
+        });
+
         //sessionsCollection = new Sessions();
 
         //var approvedCollection;
