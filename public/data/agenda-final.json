@@ -84,7 +84,7 @@
 
     {
         "name":"Game Night",
-        "desc":"",
+        "desc":"During the reception and after dinner, join us for an entertaining evening of air hockey, ping-pong, Golden Tee video golf, a virtual golf simulator, and more. In addition, door prizes will be raffled off.",
         "start":"2012-03-12 20:00",
         "type":"Activity",
         "location":"Carlisle Ballroom 2nd floor (Room A&B)"
@@ -121,7 +121,7 @@
 
     {
         "name":"Global Delivery/Lincoln AMS Q&A",
-        "desc":"",
+        "desc":"First, hear from industry leader Andrew Peel, Alsbridge Managing Director, on Global Delivery Models. Andrew is a proven expert in aligning and delivering optimized operations strategies using technology and process disciplines with expertise in all phases of the strategic sourcing lifecycle, including feasibility, design, build, transition and optimization for captives, outsourced and shared service centers. Jeff Scofield, VP, IBM Global Business Services, will then discuss IBM’s perspective on global delivery and will relate this to our new IBM sourcing relationship and how these changes will set us up for continued success in the delivery of application managed services. Finally, Brendan Malley will moderate a Global Deliver/Lincoln AMS Q&A session with Andrew and Jeff.",
         "start":"2012-03-13 9:30",
         "end":"2012-03-13 10:00",
         "type":"Panel",
@@ -288,7 +288,7 @@
         "start":"2012-03-14 12:30",
         "end":"2012-03-14 14:00",
         "type":"Activity",
-        "location":"Grandville Ballroom, 1st Floor (Room A&B)"
+        "location":"Infrastructure Trends – Berkeley Room, 2nd Floor <br> From IT to Business Technology (BT) – Grandview A, 2nd Floor <br> Linking Strategy to Governance – Beaumont Room, 2nd Floor <br>  Consumerization in the Era of the Extended Enterprise Provencial Room, 2nd Floor"
     },
 
     {
