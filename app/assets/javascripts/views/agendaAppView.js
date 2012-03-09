@@ -30,6 +30,7 @@ define([
             "agenda/newquestion":"displayNewQuestion",
             "agenda/day/:day":"displayAgendaForDay",
             "agenda/index":"getAgendaList",
+            "agenda/:id/panelist/:panelistId":"getPanelistInfo",
             "speaker/profile/:id":"getSpeakerInfo",
             "*actions":"getAgendaList"
         },
@@ -113,6 +114,28 @@ define([
             //window.scroll.refresh();
         },
 
+        getPanelistInfo:function (id, panelistId){
+            console.log(id);
+
+                       if (window.sessionDetailView != undefined) {
+                           window.sessionDetailView.remove();
+                       }
+
+                       var myModel = window.sessionsCollection.get(id);
+                       console.log(myModel);
+
+                       //$(".toolbar").html(myModel.get("speaker").name);
+
+                       window.speakerDetailView = new SpeakerDetailView({model:myModel, panelistId: panelistId});
+
+                       $("#header2").hide();
+                       $('#agendaList').html('');
+                       $("#wrapper").css("top", "36px");
+                       $("#wrapper").css("height", window.innerHeight-36 +"px");
+                       $('#agendaList').append(speakerDetailView.render().el);
+
+        },
+
         displayNewQuestion:function () {
             $("#header2").hide();
             $("#agendaList").removeAttr("style");
@@ -173,7 +196,7 @@ define([
 
 
         $(".sessionPanelist").live('click', function(){
-            window.appRouter.navigate("speaker/profile/" + $(this).data("id"), true);
+            window.appRouter.navigate("agenda/" + $(this).data("sessionid")+ "/panelist/" +$(this).data("panelistid") , true);
         });
 
         //sessionsCollection = new Sessions();

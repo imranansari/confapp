@@ -22,11 +22,19 @@ define([
         render:function () {
 
             var participantProfile;
+            var panelistId = this.options.panelistId;
 
             if (this.model.get('type') == "Presentation") {
                 participantProfile = this.model.get("speaker");
-            } else if (this.model.get('type') == "Panel") {
+            } else if ((this.model.get('type') == "Panel" ) && (this.options.panelistId == undefined) ) {
                 participantProfile = this.model.get("moderator");
+            } else if (panelistId != undefined){
+                var panelists = this.model.get("panelists");
+                $(panelists).each(function(){
+                    if (this.id === panelistId){
+                        participantProfile = this;
+                    }
+                })
             }
 
             var content = this.template(participantProfile);
