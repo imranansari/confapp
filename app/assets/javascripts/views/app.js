@@ -51,7 +51,7 @@ define([
 
                 bizLeaderPanelCollection = new Questions(questionsCollection.approved('Business Leader Panel'));
                 itVpPanelCollection = new Questions(questionsCollection.approved('IT VP Panel'));
-                globalDeliveryCollection = new Questions(questionsCollection.approved('IT VP Panel'));
+                globalDeliveryCollection = new Questions(questionsCollection.approved('Global Delivery Panel'));
 
                 var bizLeaderPanelView = new QuestionsView({collection:bizLeaderPanelCollection, el:$('#bizLeaderPanelCollection')});
                 var itVpPanelView = new QuestionsView({collection:itVpPanelCollection, el:$('#itVpPanelCollection')});
