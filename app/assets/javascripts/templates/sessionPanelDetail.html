@@ -1,54 +1,68 @@
 <div class="sessionDetail">
     <div class="sessionSpeaker">
-        <div class="timeslot">Moderator</div>
-        <div class="row-fluid">
-            <div class="speakerPic span2"><img src="/assets/speakers/{{moderator.pic_file_name}}" alt=""></div>
+        <div class="well" style="margin: 0px auto; width: 90%;margin-bottom: 10px; margin-top: 10px; padding: 10px">
+            <h4>Moderator</h4>
 
-            <div class="span9">
-                <div class="row-fluid">
-                    <div class="speakerName span12">{{moderator.name}}</div>
-                </div>
+            <div class="row-fluid">
+                <div class="speakerPic span2"><img src="/assets/speakers/{{moderator.pic_file_name}}" alt=""></div>
 
-                <div class="row-fluid">
-                    <div class="speakerTitle span12">{{moderator.title}}</div>
+                <div class="span9">
+                    <div class="row-fluid">
+                        <div class="speakerName span12">{{moderator.name}}</div>
+                    </div>
+
+                    <div class="row-fluid">
+                        <div class="speakerTitle span12">{{moderator.title}}</div>
+                    </div>
                 </div>
-            </div>
-            <div class="row_detail span1">
-                <i class="icon-chevron-right"
-                   style="background-image: url(/assets/glyphicons-halflings.png) !important;"></i>
+                <div class="row_detail span1">
+                    <i class="icon-chevron-right"
+                       style="background-image: url(/assets/glyphicons-halflings.png) !important;"></i>
+                </div>
             </div>
         </div>
     </div>
-    <div>{{desc}}</div>
-    <div class="panelists">
-        <div class="timeslot">Panelists</div>
 
-        {{#each panelists}}
-        <div class="row-fluid sessionPanelist" data-sessionid="{{../id}}" data-panelistid="{{id}}">
-            <div class="speakerPic span2"><img src="/assets/speakers/{{pic_file_name}}" alt=""></div>
-
-            <div class="span9">
-                <div class="row-fluid">
-                    <div class="speakerName span12">{{name}}</div>
-                </div>
-
-                <div class="row-fluid">
-                    <div class="speakerTitle span12">{{title}}</div>
-                </div>
-            </div>
-            <div class="row_detail span1">
-                <i class="icon-chevron-right"
-                   style="background-image: url(/assets/glyphicons-halflings.png) !important;"></i>
-            </div>
-
-        </div>
-        <hr>
-        {{/each}}
+    <div class="well" style="margin: 0px auto; width: 90%;margin-bottom: 10px; padding: 10px">
+        <h4>{{name}}</h4>
+        {{{desc}}}
     </div>
-    <div class="timeslot">Location</div>
-    <div><i class="icon-map-marker"
-            style="background-image: url(/assets/glyphicons-halflings.png) !important;"></i>
-        {{location}}
+
+    <div class="well" style="margin: 0px auto; width: 90%;margin-bottom: 10px; padding: 10px">
+        <div class="panelists">
+            <h4>Panelists</h4>
+
+            {{#each panelists}}
+            <div class="row-fluid sessionPanelist" data-sessionid="{{../id}}" data-panelistid="{{id}}">
+                <div class="speakerPic span2"><img src="/assets/speakers/{{pic_file_name}}" alt=""></div>
+
+                <div class="span9">
+                    <div class="row-fluid">
+                        <div class="speakerName span12">{{name}}</div>
+                    </div>
+
+                    <div class="row-fluid">
+                        <div class="speakerTitle span12">{{title}}</div>
+                    </div>
+                </div>
+                <div class="row_detail span1">
+                    <i class="icon-chevron-right"
+                       style="background-image: url(/assets/glyphicons-halflings.png) !important;"></i>
+                </div>
+
+            </div>
+            <hr>
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="well" style="margin: 0px auto; width: 90%;margin-bottom: 10px; padding: 10px">
+        <h4>Location</h4>
+
+        <div><i class="icon-map-marker"
+                style="background-image: url(/assets/glyphicons-halflings.png) !important;"></i>
+            {{location}}
+        </div>
     </div>
 
 </div>
