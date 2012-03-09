@@ -1,15 +1,20 @@
-<form class="well" style="min-height: 100em">
-    <select style="width:98%" id="questionPanelType">
-        <option value="0">Select Panel</option>
-        <option value="Business Leader Panel">Business Leader Panel</option>
-        <option value="IT VP Panel">IT Leadership Panel</option>
-        <option value="Global Delivery Panel">Global Delivery/Lincoln AMS Q&A</option>
-    </select>
-    <textarea class="input" id="questionDesc" rows="8" style="width:98%"
-              placeholder="Compose question..."></textarea>
+<div class="well" style="margin: 0px auto; width: 90%;margin-bottom: 10px; margin-top: 10px; padding: 10px">
+    <form style="min-height: 100em">
+        <h4>Post a Question to the Panel</h4>
 
-    <div>
-        <button type="button" class="btn" style="width: 49.5%" id="cancelNewQuestion">Cancel</button>
-        <button type="button" class="btn" style="width: 49.5%" id="postNewQuestion">Submit</button>
-    </div>
-</form>
+        <textarea class="input" id="questionDesc" rows="8" style="width:98%"
+                  placeholder="Compose question..."></textarea>
+
+        <select style="width:99%" id="questionPanelType">
+            <option value="0">Select a Panel</option>
+            <option value="Business Leader Panel">Business Leader Panel</option>
+            <option value="IT VP Panel">IT Leadership Panel</option>
+            <option value="Global Delivery Panel">Global Delivery/Lincoln AMS Q&A</option>
+        </select>
+
+        <div>
+            <button type="button" class="btn" style="width: 40.5%; height: 35px" id="cancelNewQuestion">Cancel</button>
+            <button type="button" class="btn" style="width: 58.5%; height: 35px" id="postNewQuestion">Submit</button>
+        </div>
+    </form>
+</div>
