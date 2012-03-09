@@ -28,6 +28,7 @@ define([
         var questionsCollection = new Questions();
         var itVpPanelCollection;
         var bizLeaderPanelCollection;
+        var globalDeliveryCollection;
 
         var jug = new Juggernaut;
         jug.subscribe("moderated_questions", function (data) {
@@ -37,6 +38,8 @@ define([
                     itVpPanelCollection.add(data);
                 } else if(data.panel == 'Business Leader Panel'){
                     bizLeaderPanelCollection.add(data)
+                }  else if(data.panel == 'Global Delivery Panel'){
+                    globalDeliveryCollection.add(data)
                 }
             }
         });
@@ -48,12 +51,15 @@ define([
 
                 bizLeaderPanelCollection = new Questions(questionsCollection.approved('Business Leader Panel'));
                 itVpPanelCollection = new Questions(questionsCollection.approved('IT VP Panel'));
+                globalDeliveryCollection = new Questions(questionsCollection.approved('IT VP Panel'));
 
                 var bizLeaderPanelView = new QuestionsView({collection:bizLeaderPanelCollection, el:$('#bizLeaderPanelCollection')});
                 var itVpPanelView = new QuestionsView({collection:itVpPanelCollection, el:$('#itVpPanelCollection')});
+                var globalDeliveryPanelView = new QuestionsView({collection:globalDeliveryCollection, el:$('#globalDeliveryCollection')});
 
                 bizLeaderPanelView.render();
                 itVpPanelView.render();
+                globalDeliveryPanelView.render();
             }
         });
 
