@@ -18,7 +18,7 @@
 
     {
         "name":"Welcome and Opening Remarks",
-        "desc":"Welcome Lincoln Financial Group IT Leaders and Guests, We’re glad that you are able to join us and hope that your stay at the Grandover Resort in Greensboro, North Carolina, is both rejuvenating and educational. This year’s theme is “Reimagining the Role of Information Technology.” We have a full agenda during the next three days, so please take a few minutes to read through the information in this program guide. It includes conference highlights, our agenda and other important information. We look forward to spending this time with you at the Grandover Resort and Conference Center, as it is an excellent facility and provides a truly unique environment for learning and networking. The purpose of the conference is to learn more about the dynamic role that IT plays within the organization, gain insight into IT and business leader strategies and hear first-hand from industry experts on trends in technology to reimagine our role. If we can do anything to make your stay more pleasant, please let us know. Thank you",
+        "desc":"Welcome Lincoln Financial Group IT Leaders and Guests, We’re glad that you are able to join us and hope your experience at this year’s IT Leadership Forum at the Grandover Resort in Greensboro, N.C., is both educational and rewarding. Technology is rapidly evolving, and that means we must also evolve in how we approach delivering the products and services that will allow us to lead in an increasingly competitive and demanding marketplace. To that end, this year’s Forum theme is “Reimagining the Role of Information Technology.” <br><br> We have an exciting agenda filled with thought leaders from the industry and Lincoln Financial that will hopefully challenge you to visualize the new technological landscape and the role that IT can play. You will have plenty of networking opportunities over the next few days, so take advantage of this time with your fellow technology leaders. Please take a few minutes to read through the information in this program guide — it includes conference highlights, our agenda and other important information. <br><br> We look forward to spending this time with you at the Grandover Resort and Conference Center, as it is an excellent facility and provides a truly unique environment for learning and networking. Thank you for joining us, and we hope you’re as energized as we are to be part of the 2012 Lincoln Financial Group IT Leadership Forum.",
         "start":"2012-03-12 13:00",
         "end":"2012-03-12 13:30",
         "type":"Presentation",
@@ -47,7 +47,7 @@
 
     {
         "name":"Shared Services/Information Technology Update",
-        "desc":"Ken Solon will provide overviews and updates on IT and Shared Services strategies that will lead IT and Lincoln into the future",
+        "desc":"Ken Solon will provide an update on Lincoln’s strategic technology<br>initiatives and how IT is helping to transform the way we deliver the customer experience",
         "start":"2012-03-12 15:30",
         "end":"2012-03-12 16:00",
         "type":"Presentation",
@@ -57,7 +57,7 @@
 
     {
         "name":"It’s a Social World!",
-        "desc":"Tricia Blair will discuss how the world has gone social media crazy. Facebook has 800 million users, Twitter was 27 minutes ahead of CNN announcing the death of Whitney Houston, and social media sites continue to influence and document the strength of the human community around the globe. But what does all that mean for Lincoln Financial? How is social media changing the way we do business today, and how will it influence the way we do business in the future? As Chief Digital Officer and Head of Marketing Operations Solutions, Tricia is helping Lincoln Financial find its place in the social media world, and with a Facebook page and a Twitter feed, we’re on our way. Tricia will discuss Lincoln’s social media strategy and what the future looks like in an increasingly connected and social world. She’ll also talk about digital marketing and how Lincoln Financial is focused on creating an online presence that promotes corporate visibility and the Lincoln Financial brand, enhances the customer experience and drives new business.",
+        "desc":"Tricia Blair will discuss how the world has gone social media crazy. Facebook has 800 million users, Twitter has been ahead of CNN announcing significant events, and social media sites continue to influence and document the strength of the human community around the globe. <br><br>But what does all that mean for Lincoln Financial? How is social media changing the way we do business today, and how will it influence the way we do business in the future? <br>As Chief Digital Officer and Head of Marketing Operations Solutions, Tricia is helping Lincoln Financial find its place in the social media world, and with a Facebook page and a Twitter feed, we’re on our way. <br>Tricia will discuss Lincoln’s social media strategy and what the future looks like in an increasingly connected and social world. She’ll also talk about digital marketing and how Lincoln Financial is focused on creating an online presence that enhances the customer experience, drives new business, and promotes corporate visibility and the Lincoln Financial brand.",
         "start":"2012-03-12 16:00",
         "end":"2012-03-12 16:45",
         "type":"Presentation",
@@ -141,7 +141,7 @@
 
     {
         "name":"Enterprise QA/Testing at Lincoln Financial Group",
-        "desc":"At the IT Leadership Forum last year, we committed to performing an assessment of the current state of QA/Testing, using an objective third party to review how Lincoln Financial is performing versus industry best practices. In August 2011 we kicked off the first of three assessments partnering with Cognizant, the last of which finished in January 2012. The three studies looked at our use of HP Quality Center (Test Management Tool), our use of Test Automation, and the current state of QA/Testing. This presentation by Tracy Ortgies will review the findings from the three studies and outline next steps for improving QA/Testing at Lincoln Financial",
+        "desc":"At the IT Leadership Forum last year, we committed to performing an assessment of the current state of QA/Testing, using an objective third party to review how Lincoln Financial is performing versus industry best practices. <br><br>Partnering with Cognizant in August 2011, we kicked off the first of three assessments, the last of which finished in January 2012. <br>The three studies looked at our use of HP Quality Center (Test Management Tool), our use of Test Automation, and the current state of QA/Testing. <br><br>This presentation by Tracy Ortgies will review the findings from the three studies and outline next steps for improving QA/Testing at Lincoln Financial.",
         "start":"2012-03-13 10:30",
         "end":"2012-03-13 11:15",
         "type":"Presentation",
@@ -203,7 +203,7 @@
         "desc":"",
         "start":"2012-03-13 18:00",
         "type":"Activity",
-        "location":"Grandville Ballroom Foyer"
+        "location":"Grandville Ballroom Foyer, 1st floor"
     },
 
     {
@@ -245,7 +245,7 @@
 
     {
         "name":"Infrastructure Reporting Tools Update",
-        "desc":"",
+        "desc":"John Kelly and key members of his team will provide an overview of new web, network and database infrastructure reporting tools. <br>They will highlight the new tools, their application and the impact it can have for IT operations and services.",
         "start":"2012-03-14 9:30",
         "end":"2012-03-14 10:00",
         "type":"Presentation",
@@ -302,7 +302,7 @@
 
     {
         "name":"The Best is Yet to Come",
-        "desc":"",
+        "desc":"Chuck will share an update on the Retirement Plan Services business,<br> concentrating on three main themes: our commitment to the meaningful growth of the retirement plans business and the bold actions we’re taking to fuel its success; being mindful of market forces impacting our business and managing through them; and how we set ourselves apart from competitors with our optimistic approach to retirement planning and motivating people to take actions that lead to better outcomes. <br><br>Chuck’s presentation is a call to action, challenging everyone in attendance to take charge and keep moving Lincoln forward.",
         "start":"2012-03-14 14:30",
         "end":"2012-03-14 15:00",
         "type":"Presentation",
