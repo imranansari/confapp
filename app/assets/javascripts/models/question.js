@@ -14,7 +14,7 @@ define(['underscore',
 
 
         initialize:function () {
-
+            // console.log("created at :" + this.created_at);
         }
     });
     return Question;

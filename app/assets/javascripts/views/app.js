@@ -15,13 +15,14 @@ getActivitiesFromService = function ($) {
 define([
     'jquery',
     'livequery',
+    'timeago',
     'underscore',
     'backbone',
     'juggernaut',
     'models/question',
     'collections/questions',
     'views/questionsView'
-], function ($, livequery, _, Backbone, juggernaut, Question, Questions, QuestionsView) {
+], function ($, livequery, timeago, _, Backbone, juggernaut, Question, Questions, QuestionsView) {
 
     $(document).ready(function () {
 
@@ -64,10 +65,13 @@ define([
         });
 
         $('.question').livequery(function () {
-            console.log('a');
+            $(this).show();
             $(this).addClass('bounceInDown');
         });
 
+        $("time.timeago").livequery(function(){
+            $("time.timeago").timeago();
+        })
     });
 
     var DisplayQuestionsView = Backbone.View.extend({

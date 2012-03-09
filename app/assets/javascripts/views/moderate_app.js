@@ -14,13 +14,15 @@ getActivitiesFromService = function ($) {
 
 define([
     'jquery',
+    'livequery',
+    'timeago',
     'underscore',
     'backbone',
     'juggernaut',
     'models/question',
     'collections/questions',
     'views/questionsView'
-], function ($, _, Backbone, juggernaut, Question, Questions, QuestionsView) {
+], function ($, livequery, timeago, _, Backbone, juggernaut, Question, Questions, QuestionsView) {
 
     $(document).ready(function () {
 
@@ -39,6 +41,15 @@ define([
                 $("#questions").prepend(questionsView.render().el);
             }
         });
+
+        $('.question').livequery(function () {
+            $(this).show();
+            $(this).addClass('bounceInDown');
+        });
+
+        $("time.timeago").livequery(function(){
+            $("time.timeago").timeago();
+        })
 
     });
 

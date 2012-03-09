@@ -54,6 +54,7 @@ class QuestionController < ApplicationController
 
         puts question
         question["id"] = newQuestion._id
+        question["created_at"] = newQuestion.created_at
 
         Juggernaut.publish("questions", question)
 

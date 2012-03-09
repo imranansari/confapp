@@ -1,4 +1,5 @@
 require(["order!jquery",
+    "order!timeago",
     "order!livequery",
     "order!rails",
     "order!viewporter",

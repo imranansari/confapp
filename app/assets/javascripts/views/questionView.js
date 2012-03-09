@@ -5,7 +5,7 @@ define([
     'handlebars',
     'modelbinding',
     'text!templates/question.html'
-], function ($,  _, Backbone, handlebars, modelbinding, htmlTpl) {
+], function ($, _, Backbone, handlebars, modelbinding, htmlTpl) {
 
     Backbone.ModelBinding = require('modelbinding');
 
@@ -24,6 +24,7 @@ define([
         },
         render:function () {
             var isAdmin = (this.options.mode == 'admin') ? true : false;
+            //var postedAt = $.timeago(this.model.get("created_at"));
             var content = this.template({model:this.model.toJSON(), isAdmin:isAdmin});
 
             $(this.el).html(content);

@@ -1,4 +1,4 @@
-<div class="question">
+<div class="question note rounded" style="display: none">
     <div class="row-fluid message">
         <div class="span8">{{ model.desc }}</div>
         {{# if isAdmin}}
@@ -16,7 +16,11 @@
                 </div>
             {{/if}}
         </div>
-        <div>{{ model.lapsedTime }}</div>
     </div>
     <hr>
+    <div class="row-fluid postedat">
+        <span>Posted </span>
+        <time class="timeago" datetime="{{ model.created_at }}">{{ model.created_at }}</time>
+    </div>
+
 </div>

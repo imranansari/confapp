@@ -1,6 +1,7 @@
 paths:
     jquery: "libs/jquery/jquery-min"
     livequery: "libs/jquery/livequery"
+    timeago: "libs/jquery/jquery-timeago"
     rails: "libs/jquery/rails"
     underscore: "libs/underscore/underscore-min"
     backbone: "libs/backbone/backbone-optamd3-min"
@@ -16,6 +17,7 @@ paths:
 modules:
   - name: "jquery"
   - name: "livequery"
+  - name: "timeago"
   - name: "rails"
   - name: "underscore"
   - name: "backbone"
