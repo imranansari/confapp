@@ -29,3 +29,5 @@ modules:
   - name: "iscroll"
   - name: "application"
   - name: "juggernaut"
+
+priority: ['jquery']
