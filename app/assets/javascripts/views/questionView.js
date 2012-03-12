@@ -40,12 +40,12 @@ define([
 
         events:{
             "click .decline":"decline",
-            "click .approve":"approve",
-            "click .question":"highlight"
+            "click .approve":"approve"
+            //"click .question":"highlight"
         },
 
 
-        highlight:function(){
+        highlight:function () {
             $('.question').toggleClass('bounceInDown');
         },
 
@@ -70,8 +70,10 @@ define([
         },
 
         approve:function () {
-            this.model.set({status:'approved'});
-            this.model.save();
+            if (this.model.get('status') != 'approved') {
+                this.model.set({status:'approved'});
+                this.model.save();
+            }
             return this;
         },
 
