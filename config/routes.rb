@@ -14,6 +14,7 @@ Confapp::Application.routes.draw do
   get 'question/index'
   get 'question/moderate'
   get 'question/new'
+  get 'question/report'
 
   match 'question', :to => 'question#create', format: :json, :via => :post
   match 'question', :to => 'question#list', format: :json, :via => :get
